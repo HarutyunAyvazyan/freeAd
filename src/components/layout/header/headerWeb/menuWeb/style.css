@@ -1,0 +1,155 @@
+/* .modalWindow {
+    width: 80%;
+    height: 600px;
+    background-color: aqua;
+} */
+
+.modalWindowButtons {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-right: 1px solid grey;
+}
+
+.modalWindowButton {
+    padding: 10px;
+    margin: 10px
+}
+
+
+.mainModalDiv {
+    position: relative;
+    padding-top: 30px;
+    ;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    margin: 0 auto;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
+.buttonsDiv {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+    text-decoration: none;
+    padding:0 20px
+}
+
+.tabcontent {
+    width: 100%;
+    text-decoration: none;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 0 20px;
+    display: flex;
+    padding-bottom: 100px;
+    flex-direction: column;
+
+}
+
+.subCategoryUl {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    flex-direction: column;
+}
+
+.subCategoryLi {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline;
+}
+
+.subCategoryLi:hover {
+    color: red;
+    text-decoration: underline;
+    transition: all .2s;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.tabItems {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    display: none;
+    text-align: left;
+    overflow: auto;
+    height:90%
+
+}
+
+.tabItem {
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px
+}
+
+.categoryButton {
+    background-color: inherit;
+    /* height: 60px; */
+    border: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 0;
+
+}
+
+.categoryButtonText {
+    text-align: left;
+    color:black
+
+}
+
+.categoryButton:hover {
+    background-color: rgb(111, 130, 226);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+
+
+.subCategoryLink {
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width:1280px){
+   
+    .mainModalDiv{
+        width:100%;
+        height:600px
+    }
+    .buttonsDiv {
+        width: 35%;}
+}

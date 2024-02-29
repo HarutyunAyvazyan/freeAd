@@ -1,12 +1,14 @@
-import HeaderBar from "./headerBar"
-// import HeaderSearch from "./headerSearch"
+import HeaderBar from "./headerWeb/headerBar"
+import HeaderBarMobile from "./headerMobile/headreBarMobile"
 
 
 
 const Header = () => {
+    console.log(window.innerWidth,"px")
     return (
         <div>
-            <HeaderBar/>
+            {window.innerWidth>=800 ?  <HeaderBar/>:<HeaderBarMobile innerWidth = {window.innerWidth}/>
+ }
         </div>
     )
 }
