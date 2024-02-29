@@ -4,3 +4,9 @@
     margin:0 auto;
     /* background-color: red; */
 }
+
+@media(max-width:1280px){
+    .container{
+        width:96%
+    }
+}
