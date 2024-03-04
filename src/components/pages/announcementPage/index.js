@@ -1,7 +1,7 @@
 
 const Announcement = () => {
     return (
-        <div>
+        <div  style={{marginTop:"200px"}}>
             announcement
         </div>
     )

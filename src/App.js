@@ -16,6 +16,12 @@ import SubCategorySubCategoryPage from './components/categories/subCtegorySubCat
 import MenuCategoryMobile from './components/layout/header/headerMobile/menuCategoriesMobile';
 import MenuSubCategoryMobile from './components/layout/header/headerMobile/menuSubCategoriesMobile';
 import Basket from './components/pages/basket';
+import UserMenuDropDown from './components/pages/userPage/userMenuDropDown';
+import AnnouncementUserPage from './components/pages/userPage/userMenuDropDown/announcement';
+import SettingsUserPage from './components/pages/userPage/settings';
+import Top from './components/pages/top';
+import ForBusiness from './components/pages/forBusiness';
+import SinglePage from './components/pages/singlePage';
 
 function App() {
   return (
@@ -25,6 +31,11 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element ={<AboutUs/>}/>
           <Route path="forYou" element={<ForYou />} />
+          <Route path="top" element={<Top />} />
+          <Route path="forBusiness" element={<ForBusiness />} />
+          <Route path="singlePage" element={<SinglePage />} />
+
+
           <Route path="signin" element={<Signin />} />
           <Route path="signup" element={<Signup />} />
           <Route path = "announcement" element = {<Announcement/>}/>
@@ -35,6 +46,11 @@ function App() {
           <Route path = "/:categoryName" element = {<CategoryPage/>}/>
           <Route path = "/:categoryName/:subCategoryName" element = {<SubCategoryPage/>}/>
           <Route path = "/:categoryName/:subCategoryName/:subCategorySubCategoryName" element = {<SubCategorySubCategoryPage/>}/>
+          {/* <Route path = "/userPage" element = {<UserMenuDropDown/>}/> */}
+          <Route path = "announcementUserPage" element = {<AnnouncementUserPage/>}/>
+          <Route path = "settingsUserPage" element = {<SettingsUserPage/>}/>
+
+
 
 
         </Route>

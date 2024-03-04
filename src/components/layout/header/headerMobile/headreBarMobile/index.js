@@ -22,7 +22,7 @@ const HeaderBarMobile = ({innerWidth}) => {
                     <Link className="HeaderBarMobileItem">
                         <CgMenuRound style={{
                             fontSize: "30px",
-                            color: "white"
+                            color: "blue"
                         }} />
                     </Link>
                 </div>
@@ -31,7 +31,7 @@ const HeaderBarMobile = ({innerWidth}) => {
                     <div className="HeaderBarMobileItem">
                         <BiHome style={{
                             fontSize: "18px",
-                            color: "white"
+                            color: "blue"
                         }} />
                         <span >Home</span>
                     </div>
@@ -40,7 +40,7 @@ const HeaderBarMobile = ({innerWidth}) => {
                     <div className="HeaderBarMobileItem">
                         <BsInfoCircleFill style={{
                             fontSize: "18px",
-                            color: "white"
+                            color: "blue"
                         }} />
                         <span>About us</span>
                     </div>
@@ -51,7 +51,7 @@ const HeaderBarMobile = ({innerWidth}) => {
                         <SlBasket 
                         style={{
                             fontSize: "18px",
-                            color: "white"
+                            color: "blue"
                         }} />
                         <span>Zmbyux</span>
                     </div>
@@ -69,7 +69,7 @@ const HeaderBarMobile = ({innerWidth}) => {
                     <div className="HeaderBarMobileItem">
                         <FaUser style={{
                             fontSize: "18px",
-                            color: "white"
+                            color: "blue"
                         }} />
                         <span>User</span>
                     </div>
