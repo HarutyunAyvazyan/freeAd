@@ -1,7 +1,7 @@
 .headerSearchMobile{
     display: flex; 
     flex-direction: row;
-    background-color: #9a1cbd;
+    background-color: rgb(39, 39, 108);
     justify-content: space-around;
     align-items: center;
     padding:10px 5px;

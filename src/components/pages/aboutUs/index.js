@@ -1,7 +1,7 @@
 const AboutUs =() => {
     return (
-        <div>
-            About We
+        <div style={{marginTop:"200px"}}>
+            About Us
         </div>
     )
 }

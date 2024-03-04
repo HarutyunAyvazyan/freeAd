@@ -14,7 +14,7 @@ const ModalMenu = ({ toggleModal }) => {
 
   const handleMouseEnter = (id) => {
     setCurrentTab(id);
-    console.log(id, "id")
+    // console.log(id, "id")
   };
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const ModalMenu = ({ toggleModal }) => {
                               {subCategoryLink}
 
                               </div>
-                              {console.log(subCategoryLink, "l")}
+                              {/* {console.log(subCategoryLink, "l")} */}
                             </li>
                           </Link>
                         ))}

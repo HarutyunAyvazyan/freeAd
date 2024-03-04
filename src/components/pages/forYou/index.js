@@ -1,6 +1,6 @@
 const ForYou = () => {
     return (
-        <div>
+        <div style={{marginTop:"200px"}}>
             For You
         </div>
     )
