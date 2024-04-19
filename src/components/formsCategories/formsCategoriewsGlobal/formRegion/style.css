@@ -1,0 +1,135 @@
+.aa{
+    position: relative;
+}
+
+.formRegion{
+    width:100%;
+    height: 460px;
+    padding:10px 0;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    border:1px solid rgb(18, 131, 245);
+}
+.formRegionButton{
+    margin:0 auto;
+    width:100%;
+    padding:10px 30px;
+    background-color: inherit;
+    color:rgb(22, 1, 1);
+    font-size: 18px;
+    font-weight: 300;
+    border:0px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.formRegionButton:hover{
+color: rgb(71, 46, 232);
+cursor: pointer;
+}
+.formRegionCities{
+    width:100%;
+    margin: 0 auto;
+    background-color: inherit;
+    color:black;
+    font-size: 18px;
+    text-align: left;
+}
+.formRegionCity{
+    line-height: 30px;
+}
+.formRegionCity:hover{
+    background-color:rgb(18, 131, 245) ;
+    color:white;
+    cursor: pointer;
+
+}
+.p-dropdown{
+    background-color: rgb(246, 249, 254);
+    border:1px solid rgb(203, 225, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.p-dropdown-error{
+    border:1px solid red;
+}
+
+.p-dropdown:hover{
+    border:1px solid rgb(107, 181, 255);
+    transition: linear 0.2s;
+}
+.p-dropdown-label{
+    color:grey;
+    font-size: 14px;
+    padding-left:5px;
+    text-align: left;
+}
+.p-dropdown-trigger{
+    color:rgb(18, 131, 245);
+    padding-right:5px;
+    width: 16px;
+}
+
+.p-dropdown-items-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.p-dropdown-item:hover{
+background-color: rgb(18, 131, 245);
+}
+
+.p-dropdown-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding:20px 20px;
+    cursor: pointer;
+position: relative;
+}
+
+
+
+.p-dropdown-panel {
+   border-radius: 5px;
+   border:1px solid rgb(75, 158, 241);
+   /* overflow: hidden; */
+   /* height: auto; */
+   padding:5px 0;
+background-color: rgb(246, 249, 254);
+   ;
+   /* bottom:-0; */
+   /* height:100px */
+
+}
+.p-dropdown-item-label{
+    font-size: 16px;
+    color:black;
+    text-align: left;
+}
+.p-dropdown-item:hover .p-dropdown-item-label{
+    color:white
+}
+
+ .p-dropdown-check-icon{
+color:rgb(15, 169, 45);
+position: relative;
+right:10px
+}
+
+
+   .p-component * {
+    box-sizing: border-box;
+}
+
+

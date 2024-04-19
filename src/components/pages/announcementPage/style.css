@@ -1,0 +1,167 @@
+.announcement {
+    margin-top: 120px
+}
+
+
+.announcementlDiv {
+    /* position: relative; */
+    padding-top: 30px;
+    ;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    margin: 0 auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 15;
+}
+
+.announcementButtonsDiv {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.announcementTabcontent {
+    width: 100%;
+    text-decoration: none;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 0 20px;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+
+
+}
+.announcementTabcontentText{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcementSubCategoryUl {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    flex-direction: column;
+}
+
+.announcementSubCategoryLi {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline;
+    font-size: 15px;
+}
+
+.announcementSubCategoryLi:hover {
+    color: red;
+    text-decoration: underline;
+    transition: all .2s;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-right:40px;
+}
+
+.announcementTabItems {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    display: none;
+    text-align: left;
+    overflow: auto;
+    height: 90%
+}
+
+.announcementTabItem {
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px
+}
+
+.announcementCategoryButton {
+    background-color: inherit;
+    /* height: 60px; */
+    border: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    cursor: pointer;
+
+
+}
+
+.announcementCategoryButtonText {
+    text-align: left;
+    color: black;
+    font-size: 16px
+}
+
+.announcementCategoryButton:hover {
+    background-color: rgb(111, 130, 226);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.announcementCategoryButton:hover .categoryButtonText {
+    color: white;
+
+    /* line-height: 2; */
+
+}
+
+.announcementCategoryButton:hover .categoryButtonArrow {
+    color: white
+}
+
+
+
+.announcementSubCategoryLink {
+    text-decoration: none;
+    color: black;
+}
+
+.pppp {
+    display: flex;
+    height: 200px;
+    /* background-color: antiquewhite; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.categoryName{
+    display:flex ;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}

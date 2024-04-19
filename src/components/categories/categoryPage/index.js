@@ -8,8 +8,8 @@ const CategoryPage = () => {
     const { categoryName } = useParams()
     console.log(categoryName, "categorId")
     return (
-        <div className="container">
-            <div className="categoryPage">
+        <div className="container" style={{marginTop:"200px"}}>
+            {/* <div className="categoryPage">
                 <div className="categoryPageMenuCategories">
                     <Link to={"/"} className="categoryPageMenuCategoriesArrow"><h6>GLXAVOR</h6><IoIosArrowForward /> </Link>
                     <h6>{categoryName}</h6>
@@ -28,7 +28,8 @@ const CategoryPage = () => {
                                 </Link>
                             ))
                 ))}
-            </div>
+            </div> */}
+            category page
         </div>
 
 

@@ -1,0 +1,102 @@
+.basketText {
+    width: 75%;
+    background-color: white;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.basketMenu {
+    width: 20%;
+    background-color: white;
+    height: 200px;
+    border-radius: 20px;
+    position: sticky;
+    top: 90px;
+    /* margin-top: 300px; */
+    /* margin:300px auto */
+}
+
+.basket {
+    /* margin-top: 110px; */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.basketContent {
+    width: 90%;
+    background-color: white;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px
+}
+
+.basketConuntProduct {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.basketConuntProductCheckbox {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-bottom: 20px; */
+    /* background-color: antiquewhite; */
+    /* border-bottom:1px solid rgb(180, 116, 240); */
+    padding: 5px 0;
+    margin:0 auto
+    /* position: relative; */
+}
+
+.basketChooseAll {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* position: absolute ; */
+    margin: 0 auto
+}
+
+.basketChekBoxChhose {
+    font-size: 30px;
+    color: red;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.basketChoose {
+    display: flex;
+    flex-direction: row;
+    gap:0 10px;
+    cursor: pointer;
+}
+
+.basketIcons {
+   display: flex;
+   flex-direction: row;
+   gap:0 40px
+}
+
+
+.favoriteMenu{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 18%;
+    height: 200px;
+    border-radius: 20px;
+    position: sticky;
+    top: 100px;
+}
+
+.favoriteMenuItem{
+    width: 100%;
+    padding:10px
+}
+
+.containerBasketChaeckbox{
+    width:90%
+}

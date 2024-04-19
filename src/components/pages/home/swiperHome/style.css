@@ -36,8 +36,8 @@
 .homeCategoryItem{
   width:96%;
   height:96%;
-  background-color: red;
-  background-color: rgb(117, 115, 237);
+  /* background-color: red; */
+  /* background-color: rgb(117, 115, 237); */
   border:1px solid rgb(186, 186, 237);
   border-radius: 10px;
   z-index:-1;
@@ -45,5 +45,5 @@
   margin: 0 auto;
 }
 .swiper  {
-  z-index: -1;
+  z-index: 1;
 }

@@ -1,0 +1,78 @@
+
+[
+    {
+      "id": 1,
+      "phone": 374158565,
+      "lastName": " Qaramyan",
+      "firstName": "Arman",
+      "email": "user@getDefaultNormalizer.com",
+      "products": [
+        5
+      ]
+    },
+    {
+    "id": 2,
+    "phone": 374589647,
+    "lastName": "Qochatyan",
+    "firstName": "Ani",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [2,4]
+  } ,{
+    "id": 3,
+    "phone": 6465465,
+    "lastName": "Tandilyan",
+    "firstName": "Armen",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [6]
+  } ,{
+    "id": 4,
+    "phone": 97987987,
+    "lastName": "Hakobyan",
+    "firstName": "Gor",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [3]
+  } ,{
+    "id": 5,
+    "phone": 7654654,
+    "lastName": "Devoyan",
+    "firstName": "Sofi",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [16]
+  } ,{
+    "id": 6,
+    "phone": 374589647,
+    "lastName": "Manukyan",
+    "firstName": "Aram",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [14,7,2,1]
+  },
+  {
+    "id": 7,
+    "phone": 374589647,
+    "lastName": "Xazaryan",
+    "firstName": "Ashot",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [18]
+  },{
+    "id": 8,
+    "phone": 374589647,
+    "lastName": "Hakobyan",
+    "firstName": "Arman",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [8]
+  },{
+    "id": 9,
+    "phone": 374589647,
+    "lastName": "Bayadyan",
+    "firstName": "Samvel",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [10]
+  },{
+    "id": 10,
+    "phone": 374589647,
+    "lastName": "Aydinyan",
+    "firstName": "Artur",
+    "email": "user@getDefaultNormalizer.com",
+    "products": [1]
+  }
+  ]

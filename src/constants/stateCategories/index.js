@@ -7,14 +7,130 @@ import sport from  '../../assets/images/imageButtonsCategories/sport.jpg'
 import working from  '../../assets/images/imageButtonsCategories/job.jpg'
 import electronicDevices from  '../../assets/images/imageButtonsCategories/electroniks.jpg'
 import child from  '../../assets/images/imageButtonsCategories/child.jpg'
+import FormRegion from '../../components/formsCategories/formsCategoriewsGlobal/formRegion'
+import FormHouse from '../../components/formsCategories/formsRealEstate/formHouse'
 
 
+export const categories = [
+    {
+        id: 1,
+        name: "Ansharj guyq",
+        subCategories: [
+            {
+                id: 1,
+                name: "vacharq",
+                subCategories: [
+                    {
+                        id: 6,
+                        name: "hoxamaser",
+                        formComponent:<FormRegion/>
+                    } ,{
+                        id: 7,
+                        name: "tnakner",
+                        formComponent:<FormRegion/>
+                    } 
+                ]
+            },
+            {
+                id: 2,
+                name: "vardzakalutyun",
+                subCategories: [
+                    {
+                        id: 8,
+                        name: "hoxamaser",
+                        formComponent:<FormRegion/>
+                    } ,{
+                        id: 9,
+                        name: "tnakner",
+                        formComponent:<FormRegion/>
+                    } 
+                ]
+            }, {
+                id: 3,
+                name: "oravardzov",
+                subCategories: [
+                    {
+                        id: 10,
+                        name: "tner",
+                        formComponent:<FormHouse/>
+                    } ,{
+                        id: 11,
+                        name: "avtotnakner ev kayanatexi",
+                        formComponent:<FormRegion/>
+                    } ,
+               
+
+                ]
+            },
+            {
+                id: 4,
+                name: "norakaruyc ansharj guyq",
+                subCategories: [
+                    {
+                        id: 12,
+                        name: "bnakaranner",
+                        formComponent:<FormHouse/>
+                    }
+                    ,
+                    {
+                        id: 13,
+                        name: "tner",
+                        formComponent:<FormRegion/>
+                        }
+                ]
+            },
+        ]
+    },
+    {
+        id: 2,
+        name: "Transport",
+        subCategories: [
+            {
+                id: 1,
+                name: "avtomeqenaner",
+                subCategories: [
+                    {
+                        id: 14,
+                        name: "avtomeqenenaner",
+                        formComponent:<FormRegion/>
+                    }
+                    ,
+                    {
+                        id: 15,
+                        name:  "vtarvac meqenaner",
+                        formComponent:<FormHouse/>
+                        }
+               
+                ]
+            },
+            {
+                id: 2,
+                name: "komercion",
+                subCategories: [
+                    {
+                        id: 16,
+                        name: "bernatarner",
+                        formComponent:<FormRegion/>
+                    }
+                    ,
+                    {
+                        id: 17,
+                        name:  "avtobusner",
+                        formComponent:<FormHouse/>
+                        }
+                  
+                ]
+            }, 
+        ]
+    }
+
+]
 
 
 const Categories = [
     {
         id: 1,
-        name: "ANSHARJ GUYQ",
+        name: "Ansharj guyq",
         pathImg: house,
         subCategories: [
             {
@@ -24,7 +140,10 @@ const Categories = [
                     "tner",
                     "bnakaranner",
                     "hoxamaser",
-                    "komercion"
+                    "komercion",
+                    "amaranocner",
+                    "avtotnakner ev kayanatexi",
+                    "tnakner",
                 ]
             },
             {
@@ -34,7 +153,10 @@ const Categories = [
                     "tner",
                     "bnakaranner",
                     "hoxamaser",
-                    "komercion"
+                    "komercion",
+                    "amaranocner",
+                    "avtotnakner ev kayanatexi",
+                    "tnakner",
                 ]
             }, {
                 id: 3,
@@ -42,46 +164,25 @@ const Categories = [
                 subCategories: [
                     "tner",
                     "bnakaranner",
-                    "hoxamaser",
-                    "komercion"
+                    "senyakner",
+                    "avtotnakner ev kayanatexi",
+                    "amaranocner"
+
                 ]
             },
             {
                 id: 4,
-                name: "texnologianer ev TT",
+                name: "norakaruyc ansharj guyq",
                 subCategories: [
-                    "Ծրագրավորում և զարգացում",
-                    "Փորձարկում և QA",
-                    "Պրոդուկտի և նախագծերի կառավարում",
-                    " Հեռահաղորդակցություն և կապ"
-                ]
-            },
-            {
-                id: 5,
-                name: "arhest ev artadrutyun",
-                subCategories: [
-                    "Շինարարություն և վերանորոգում",
-                    "Պահեստներ և լոգիստիկա",
-                    "Գործարաններ և արտադրություն",
-                    "Գյուղատնտեսություն և անասնաբուծություն"
-                ]
-            }, {
-                id: 6,
-                name: "marketing ev lratvamijocner",
-                subCategories: [
-                    "Մարկետինգ, գովազդ և PR",
-                    "Մեդիա և դիզայն",
-                    "Լրագրություն և հրատարակչություն",
-                    "Մարկետինգ, գովազդ և PR",
-                    "Մեդիա և դիզայն",
-                    "Լրագրություն և հրատարակչություն"
+                    "bnakaranner",
+                    "tner",
                 ]
             },
         ]
     },
     {
         id: 2,
-        name: "TRANSPORT",
+        name: "Transport",
         pathImg: car,
         subCategories: [
             {
@@ -111,7 +212,7 @@ const Categories = [
     },
     {
         id: 3,
-        name: "ELECTRONIKA",
+        name: "Electronika",
         pathImg: electronicDevices,
         subCategories: [
             {
@@ -141,7 +242,7 @@ const Categories = [
     },
     {
         id: 4,
-        name: "ASHXATANQ",
+        name: "Ashxatanq",
         pathImg: working,
         subCategories: [
             {
@@ -176,7 +277,7 @@ const Categories = [
     },
     {
         id: 5,
-        name: "TUN EV AYGI",
+        name: "Tun ev aygi",
         pathImg: garden,
         subCategories: [
             {
@@ -212,7 +313,7 @@ const Categories = [
     },
     {
         id: 6,
-        name: "HOBBI EV XAXER",
+        name: "Hobbi ev sport",
         pathImg: sport,
         subCategories: [
             {
@@ -247,7 +348,7 @@ const Categories = [
         ]
     }, {
         id: 7,
-        name: "KENDANINER",
+        name: "Kendaniner",
         pathImg: animals,
         subCategories: [
             {
@@ -298,7 +399,7 @@ const Categories = [
         ]
     }, {
         id: 8,
-        name: "ANDZNAKAN IRER",
+        name: "Andznakan irer",
         pathImg: clothes,
         subCategories: [
             {
@@ -367,7 +468,7 @@ const Categories = [
         ]
     }, {
         id: 10,
-        name: "Erexaneri hamar",
+        name: "Carayutyunner",
         pathImg: child,
         subCategories: [
             {
@@ -402,7 +503,7 @@ const Categories = [
     },
     {
         id:11,
-        name: "Erexaneri hamar",
+        name: "Kencaxayin texnika",
         pathImg: child,
         subCategories: [
             {
@@ -437,7 +538,7 @@ const Categories = [
     },
     {
         id: 12,
-        name: "Erexaneri hamar",
+        name: "Biznes ev sarqavorumner",
         pathImg: child,
         subCategories: [
             {
@@ -470,41 +571,76 @@ const Categories = [
             },
         ]
     },
-    // {
-    //     id: 13,
-    //     name: "Erexaneri hamar",
-    //     pathImg: child,
-    //     subCategories: [
-    //         {
-    //             id: 1,
-    //             name: "texnologianer ev TT",
-    //             subCategories: [
-    //                 "Ծրագրավորում և զարգացում",
-    //                 "Փորձարկում և QA",
-    //                 "Պրոդուկտի և նախագծերի կառավարում",
-    //                 " Հեռահաղորդակցություն և կապ"
-    //             ]
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "arhest ev artadrutyun",
-    //             subCategories: [
-    //                 "Շինարարություն և վերանորոգում",
-    //                 "Պահեստներ և լոգիստիկա",
-    //                 "Գործարաններ և արտադրություն",
-    //                 "Գյուղատնտեսություն և անասնաբուծություն"
-    //             ]
-    //         }, {
-    //             id: 3,
-    //             name: "marketing ev lratvamijocner",
-    //             subCategories: [
-    //                 "Մարկետինգ, գովազդ և PR",
-    //                 "Մեդիա և դիզայն",
-    //                 "Լրագրություն և հրատարակչություն"
-    //             ]
-    //         },
-    //     ]
-    // }
+    {
+        id: 13,
+        name: "Shinararutyun",
+        pathImg: child,
+        subCategories: [
+            {
+                id: 1,
+                name: "texnologianer ev TT",
+                subCategories: [
+                    "Ծրագրավորում և զարգացում",
+                    "Փորձարկում և QA",
+                    "Պրոդուկտի և նախագծերի կառավարում",
+                    " Հեռահաղորդակցություն և կապ"
+                ]
+            },
+            {
+                id: 2,
+                name: "arhest ev artadrutyun",
+                subCategories: [
+                    "Շինարարություն և վերանորոգում",
+                    "Պահեստներ և լոգիստիկա",
+                    "Գործարաններ և արտադրություն",
+                    "Գյուղատնտեսություն և անասնաբուծություն"
+                ]
+            }, {
+                id: 3,
+                name: "marketing ev lratvamijocner",
+                subCategories: [
+                    "Մարկետինգ, գովազդ և PR",
+                    "Մեդիա և դիզայն",
+                    "Լրագրություն և հրատարակչություն"
+                ]
+            },
+        ]
+    },
+    {
+        id:14,
+        name: "Ayl",
+        pathImg: child,
+        subCategories: [
+            {
+                id: 1,
+                name: "texnologianer ev TT",
+                subCategories: [
+                    "Ծրագրավորում և զարգացում",
+                    "Փորձարկում և QA",
+                    "Պրոդուկտի և նախագծերի կառավարում",
+                    " Հեռահաղորդակցություն և կապ"
+                ]
+            },
+            {
+                id: 2,
+                name: "arhest ev artadrutyun",
+                subCategories: [
+                    "Շինարարություն և վերանորոգում",
+                    "Պահեստներ և լոգիստիկա",
+                    "Գործարաններ և արտադրություն",
+                    "Գյուղատնտեսություն և անասնաբուծություն"
+                ]
+            }, {
+                id: 3,
+                name: "marketing ev lratvamijocner",
+                subCategories: [
+                    "Մարկետինգ, գովազդ և PR",
+                    "Մեդիա և դիզայն",
+                    "Լրագրություն և հրատարակչություն"
+                ]
+            },
+        ]
+    }
 
 
 ]

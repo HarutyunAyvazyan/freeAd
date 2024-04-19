@@ -1,7 +1,9 @@
-.logo{
-    width: 10%;
+.logo {
+    /* width: 10%; */
+    text-align: left;
 }
-.logoLink{
-    color:rgb(18, 131, 245);
+
+.logoLink {
+    color: rgb(18, 131, 245);
 
 }

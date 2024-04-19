@@ -3,11 +3,11 @@ import HeaderBarMobile from "./headerMobile/headreBarMobile"
 
 
 
-const Header = () => {
-    console.log(window.innerWidth,"px")
+const Header = ({countBasket}) => {
+    // console.log(window.innerWidth,"px")
     return (
         <div>
-            {window.innerWidth>=800 ?  <HeaderBar/>:<HeaderBarMobile innerWidth = {window.innerWidth}/>
+            {window.innerWidth>=800 ?  <HeaderBar countBasket={countBasket}/>:<HeaderBarMobile innerWidth = {window.innerWidth}/>
  }
         </div>
     )

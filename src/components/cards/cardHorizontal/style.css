@@ -1,0 +1,89 @@
+
+.cardHorizontal{
+display: flex;
+flex-direction: row;
+border:1px solid rgb(198, 199, 204);
+border-radius: 5px;;
+padding:5px;
+width:90%;
+margin:0 auto;
+height:220px;
+background-color: rgb(252, 253, 255);
+}
+
+.cardHorizontalImageDiv{
+    width:240px;
+    height:100%
+}
+.cardHorizontalDescription{
+    width:70%;
+    text-align: left;
+    padding-left:10px;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+.cardHorizontalImage{
+    width:100%;
+    height:100%;
+    border:1px solid rgb(188, 204, 249)
+}
+.cardHorizontalDescription{
+    margin-left:5px;
+    /* position: relative; */
+}
+
+.cardHorizontalDescriptionCategoryName{
+    font-size: 12px;
+    padding:5px;
+    border-bottom:1px solid rgb(248, 238, 251) ;
+    height:8%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.cardHorizontalDescriptionDate{
+    /* margin-top:60px; */
+    width:100%;
+    /* position: absolute; */
+    /* bottom:0; */
+    /* right:20px; */
+    /* left:10px; */
+    border-top: 1px solid rgb(248, 238, 251);
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:8%
+}
+
+.cardHorizontalDescriptionContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height:84%
+    
+}
+
+.cardHorizontalDescriptionIcon{
+    font-size: 22px;
+    color:rgb(226, 31, 145);
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    cursor: pointer;
+}
+.cardHorizontalDescriptionContentMain{
+    overflow: hidden;
+    width:90%;
+    height: 100%;
+    text-decoration: none;
+
+}
+
+.cardHorizontalLink{
+    text-decoration: none;
+    /* width: 100%; */
+}

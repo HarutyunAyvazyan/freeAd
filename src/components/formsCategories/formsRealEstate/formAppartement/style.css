@@ -1,0 +1,143 @@
+.formItem {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 10px 30px;
+    width:100%;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding-Left:40px
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    gap:20px 0
+}
+.formItemUi{
+    width:86%;
+    /* background-color: aquamarine; */
+display: flex;
+}
+.formGroupTitle{
+    text-align: left;
+    font-weight: 500;
+    margin:0;
+    margin-bottom: 20px;
+    color:rgb(14, 14, 187)
+}
+.formAppartement {
+    background-color: white;
+     /* background-color: rgb(240, 248, 254);  */
+
+    padding: 100px 0;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formItemTitle {
+    color: rgb(3, 20, 204);
+    font-size: 18px;
+    /* font-weight: 500; */
+    text-align: end;
+    width:20%;
+    
+    /* background-color: antiquewhite; */
+}
+
+.formContent {
+width:90%;
+margin:0 auto;
+display: flex;
+flex-direction: column;
+gap: 40px 0;
+/* margin-left:10%; */
+/* background-color: rgb(240, 248, 254); */
+padding-left:80px
+
+}
+.p-dropdown{
+    background-color: rgb(246, 249, 254);
+    border:1px solid rgb(203, 225, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.p-dropdown-error{
+    border:1px solid red;
+}
+
+.p-dropdown:hover{
+    border:1px solid rgb(107, 181, 255);
+    transition: linear 0.2s;
+}
+.p-dropdown-label{
+    color:grey;
+    font-size: 14px;
+    padding-left:5px;
+    text-align: left;
+}
+.p-dropdown-trigger{
+    color:rgb(18, 131, 245);
+    padding-right:5px;
+    width: 16px;
+}
+
+.p-dropdown-items-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.p-dropdown-item:hover{
+background-color: rgb(18, 131, 245);
+}
+
+.p-dropdown-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding:20px 20px;
+    cursor: pointer;
+position: relative;
+}
+
+
+
+.p-dropdown-panel {
+   border-radius: 5px;
+   border:1px solid rgb(75, 158, 241);
+   /* overflow: hidden; */
+   /* height: auto; */
+   padding:5px 0;
+background-color: rgb(246, 249, 254);
+   ;
+   /* bottom:-0; */
+   /* height:100px */
+
+}
+.p-dropdown-item-label{
+    font-size: 16px;
+    color:black;
+    text-align: left;
+}
+.p-dropdown-item:hover .p-dropdown-item-label{
+    color:white
+}
+
+ .p-dropdown-check-icon{
+color:rgb(15, 169, 45);
+position: relative;
+right:10px
+}
+
+
+   .p-component * {
+    box-sizing: border-box;
+}

@@ -8,10 +8,15 @@ import { MdAnnouncement } from "react-icons/md";
 
 
 import "./style.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const UserMenuDropDown = ({ isOpen, toogleModal }) => {
+    const navigate = useNavigate()
+    const logout = () => {
+        localStorage.removeItem("user")
+        navigate("/")
+    }
     return (
         <div className="userMenuDropDown" style={isOpen ? { display: "flex" } : { display: "none" }}>
             <div className="userMenuDropDownDiv">
@@ -21,7 +26,7 @@ const UserMenuDropDown = ({ isOpen, toogleModal }) => {
                 <button className="userMenuDropDownButton"><BsEnvelope className="userMenuDropDownButtonIcon" /><span className="userMenuDropDownText">haxordagrutyunner</span></button>
                 <Link to={"settingsUserPage"}><button className="userMenuDropDownButton"><FiSettings className="userMenuDropDownButtonIcon" /><span className="userMenuDropDownText">kargavorumner</span></button> </Link>
                 <div className="exitButton">
-                    <button className="userMenuDropDownButton"><IoIosExit className="userMenuDropDownButtonIcon" /><span className="userMenuDropDownText">elq</span></button>
+                    <button className="userMenuDropDownButton" onClick={logout}><IoIosExit className="userMenuDropDownButtonIcon" /><span className="userMenuDropDownText">elq</span></button>
                 </div>
             </div>
 
