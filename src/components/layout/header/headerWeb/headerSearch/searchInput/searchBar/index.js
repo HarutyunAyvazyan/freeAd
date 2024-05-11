@@ -1,42 +1,22 @@
-import { useEffect, useState } from "react";
-import SearchResults from "../searchResults";
+import { FaSearch } from 'react-icons/fa';
+
 import "./style.css"
-import { FaSearch } from "react-icons/fa";
-import ModalWindowSearch from "../modalWindowSearch";
 
 
-const SearchBar = ({ setOpenModal,handleChange,inputValue,onBlur }) => {
-    // const [inputValue, setInputValue] = useState("")
-    const [searchHistoryArray,setSearchHistoryArray] = useState([])
-  
-    // useEffect(() => {
-    //     const searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
-    //     if (searchHistory) {
-    //         setSearchHistoryArray(searchHistory);
-    //     }
-    // }, []); // Empty dependency array ensures this effect runs only once on mount
-
-    // const handleChange = (e) => {
-    //     setInputValue(e.target.value);
-    // };
-
- 
-
+const SearchBar = ({ setOpenModal, handleChange, inputValue, onBlur }) => {
     return (
-        <div className="searchBar" >
+        <div className='searchBar' >
             <FaSearch className="searchIcon" />
-            <input placeholder="search ..."
+            <input
+                placeholder="search ..."
                 onChange={handleChange}
                 value={inputValue}
                 className="searcInput"
-                onClick={() => {
-                    setOpenModal(true)
-                }}
-              onBlur={(event)=>onBlur(event) }
-                    
+                onClick={() => setOpenModal(true)}
+                // onBlur={(event) => onBlur(event)}
             />
         </div>
     )
-}
+};
 
 export default SearchBar
