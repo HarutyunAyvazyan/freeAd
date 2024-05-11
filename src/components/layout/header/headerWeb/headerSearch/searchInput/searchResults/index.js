@@ -29,7 +29,7 @@ const categoriesName = [
     },
 ]
 
-const SearchResults = ({ openModal, removeLocalStorageItem, searchHistoryRemoveAll }) => {
+const SearchResults = ({ openModal, removeLocalStorageItem, searchHistoryRemoveAll,setRemoveClicked }) => {
     const searchHistory = JSON.parse(localStorage.getItem("searchHistory"))
     // console.log(searchHistory, "hiiiiiiiii")
     const reverseHistory = searchHistory?.reverse()
@@ -40,7 +40,7 @@ const SearchResults = ({ openModal, removeLocalStorageItem, searchHistoryRemoveA
         <div className="searchResults" style={openModal ? { display: "block" } : { display: "none" }}>
             {lastSearch && lastSearch.length > 0 &&
                 <div>
-                    <div className="searchResultsRemoveAll" onClick={searchHistoryRemoveAll}>
+                    <div className="searchResultsRemoveAll" onClick={(e)=>searchHistoryRemoveAll(e)}>
                         <RiDeleteBin6Line className="searchResultsRemoveAllIcon" />
                         <span className="searchResultsRemoveAllText">jnjel patmutyun@</span>
                     </div>
@@ -48,10 +48,10 @@ const SearchResults = ({ openModal, removeLocalStorageItem, searchHistoryRemoveA
                     {/* <h4 className="searchResultsTitle">Verjin voronumner@</h4> */}
 
                     {lastSearch.map((searchName,index) => (
-                        <Link to={pageName.home} className="searchResultsItem" key={index}>
+                        <Link to={pageName.home} className="searchResultsItem" key={index} >
                             <MdOutlineUpdate className="searchResultsItemIcon" />
                             <p className="searchResultsItemText">{searchName}</p>
-                            <TiDeleteOutline className="searchResultsItemDelete" onClick={() => removeLocalStorageItem(searchName)} />
+                            <TiDeleteOutline className="searchResultsItemDelete" onClick={(e) => removeLocalStorageItem(e,searchName)} />
                         </Link>
 
                     ))}

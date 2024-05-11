@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import ModalWindowSearch from "../modalWindowSearch";
 
 
-const SearchBar = ({ setOpenModal,handleChange,inputValue,setRemoveClicked,removeClicked }) => {
+const SearchBar = ({ setOpenModal,handleChange,inputValue,onBlur }) => {
     // const [inputValue, setInputValue] = useState("")
     const [searchHistoryArray,setSearchHistoryArray] = useState([])
   
@@ -29,14 +29,11 @@ const SearchBar = ({ setOpenModal,handleChange,inputValue,setRemoveClicked,remov
                 onChange={handleChange}
                 value={inputValue}
                 className="searcInput"
-                onFocus={() => {
+                onClick={() => {
                     setOpenModal(true)
                 }}
-              onBlur={() => {
-                    setTimeout(() => {
-                        setOpenModal(false)
-                    }, 300)
-                }}  
+              onBlur={(event)=>onBlur(event) }
+                    
             />
         </div>
     )

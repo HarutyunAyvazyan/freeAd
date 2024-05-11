@@ -25,7 +25,7 @@ import FormComponent from "../../formSubCategoryComponent";
 
 
 const FormAppartement = () => {
-    const {   next,back,isFirstStep,isLastStep} = useMultiSteperFormAnnouncement([<FormComponent/>, <div>2</div>])
+    const { next, back, isFirstStep, isLastStep } = useMultiSteperFormAnnouncement([<FormComponent />, <div>2</div>])
 
     const [selectedOption, setSelectedOption] = useState(null);
 
@@ -197,25 +197,19 @@ const FormAppartement = () => {
 
     const initalValues = {
         categoryName: matchedCategories,
-        countFloor: "",
-        buildingType: "",
-        newBuilding: "",
-        verelak: "",
-        shqamutq: [],
-        picked: "",
-        floor: "",
         makeres: "",
-
         snahanguycneriQanak: "",
         senyakneriQanak: "",
         arastaxiBardzrutyun: "",
         patshgamb: "",
+        verela: "",
         kahuyq: "",
         veranorogum: "",
         kencaxayinTexnika: [],
         tesaranPatuhanic: [],
         nkaragir: "",
-        nkar: []
+        nkar: [],
+        // title: [formik.values.verela]
     }
 
     const validationSchema = Yup.object({
@@ -244,14 +238,17 @@ const FormAppartement = () => {
 
     const onSubmit = (values) => setTimeout(() => {
         next()
-        console.log(values)
+        console.log({
+            ...values,
+            title: [{bnakaran: values.verela}]
+        })
         // alert(JSON.stringify(values, null, 2));
     }, 400);
 
 
     return (
         <Formik initialValues={initalValues}
-            validationSchema={validationSchema}
+            // validationSchema={validationSchema}
             onSubmit={onSubmit}>
             {
                 formik => {
@@ -326,7 +323,7 @@ const FormAppartement = () => {
                                                 <ErrorMessage component={TextErrors} name="buildingType" />
                                             </div>
                                         </div>
-                                        <div className="formItem">
+                                        {/* <div className="formItem">
                                             <div className="formItemTitle">norakaruyc</div>
                                             <div className="formItemUi">
                                                 <Dropdown
@@ -344,12 +341,12 @@ const FormAppartement = () => {
                                                 />
                                                 <ErrorMessage component={TextErrors} name="newBuilding" />
                                             </div>
-                                        </div>
+                                                </div> */}
                                         <div className="formItem">
                                             <div className="formItemTitle">verelak</div>
                                             <div className="formItemUi">
                                                 <Dropdown
-                                                    className={formik.touched.verelak && formik.errors.verelak ? "p-dropdown-error" : "pdropdown"}
+                                                    className={formik.touched.verela && formik.errors.verela ? "p-dropdown-error" : "pdropdown"}
                                                     checkmark={true}
                                                     style={{
                                                         width: 200,
@@ -359,11 +356,11 @@ const FormAppartement = () => {
                                                     options={verelak}
                                                     virtualScrollerOptions={{ itemSize: 38, autoSize: true }}
                                                     placeholder="Select Item"
-                                                    {...formik.getFieldProps("verelak")}
+                                                    {...formik.getFieldProps("verela")}
                                                 />
-                                                <ErrorMessage component={TextErrors} name="verelak" />
+                                                <ErrorMessage component={TextErrors} name="verela" />
                                             </div>
-                                        </div>
+                                        </div> 
                                         {/* <div className="formItem">
                                             <div className="formItemTitle">arka en</div>
                                             <div className="formItemUi">
@@ -428,7 +425,7 @@ const FormAppartement = () => {
                                                 <ErrorMessage component={TextErrors} name="makeres" />
                                             </div>
                                         </div>
-                                        <div className="formItem">
+                                        {/* <div className="formItem">
                                             <div className="formItemTitle">snahanguycneri qanak@</div>
                                             <div className="formItemUi">
                                                 <Dropdown
@@ -567,7 +564,7 @@ const FormAppartement = () => {
                                                 />
                                                 <ErrorMessage component={TextErrors} name="tesaranPatuhanic" />
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="formItem">
                                             <div className="formItemTitle">nkaragir</div>
                                             <div className="formItemUi">
@@ -592,11 +589,12 @@ const FormAppartement = () => {
                                                 <ErrorMessage component={TextErrors} name="nkar" />
 
                                             </div>
-                                            <div>
+                                            <button type="submit">jdshdjhsdjdh</button>
+                                            {/* <div>
                                                 {!isFirstStep && <button onClick={back}> back </button>
                                                 }
                                                 <button onClick={next}  type="submit">{isLastStep ? "finish" : "next"}  </button>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

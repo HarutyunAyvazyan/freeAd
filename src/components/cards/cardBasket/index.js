@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteFavorite, onChange } from "../../../store/featueres/favoriteState";
 import { UniqueComponentId } from "primereact/utils";
 import pageName from "../../../constants/pageName";
+import { ImageBoxCards, ImageBoxCardsMobile } from "..";
 
 const CardBasket = ({ product, basketChekBoxChoose,handleDeleteItem,favorites,handleCheck }) => {
     // console.log(product,"sw")
@@ -23,11 +24,11 @@ const CardBasket = ({ product, basketChekBoxChoose,handleDeleteItem,favorites,ha
         // dispatch(onChange(product.id))
     }
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
 
 
-    const prod = favorites.filter(item => product.id === item.id)
+    // const prod = favorites.filter(item => product.id === item.id)
 
     return (
         <label>
@@ -35,7 +36,9 @@ const CardBasket = ({ product, basketChekBoxChoose,handleDeleteItem,favorites,ha
             <div className="cardBasketLink" >
 
                 <div className="cardBasketImageDiv" >
-                    <img src={product.images[0]} className="cardBasketImage" />
+                <ImageBoxCards images = {product.images}/>
+
+                    {/* <img src={product.images[0]} className="cardBasketImage" /> */}
                     <div className="cardBasketImageCheckBoxDiv" style={basketChekBoxChoose && favorites.length > 1 ? { display: "block" } : { display: "none" }} >
                         <input
                             className="cardBasketImageCheckBox"
@@ -52,25 +55,28 @@ const CardBasket = ({ product, basketChekBoxChoose,handleDeleteItem,favorites,ha
                     <BsTrash3 className="cardBasketIconDelete" onClick={() => handleDeleteItem(product.id)} />
                 </div>
                 <div className="cardBasketDescriptionCategoryName">
-                    GLXAVOR
-                    TRANSPORT
-                    AVTOMEQENANER
-                    AVTOMEQENANER
+                    {product.subCategoryName}
                 </div>
                 <div className="cardBasketDescriptionContent">
                     <Link to={basketChekBoxChoose && favorites.length > 1 ? null : `/${pageName.product}/${product.id}`} className="cardBasketDescriptionContentMain" >
-                        <h1 style={{ fontWeight: "400", margin: "0" }}>{product.price}</h1>
-                        <h3
-                            className="cardBasketDescriptionTitle"
-                            style={{ fontWeight: "500" }}
-                        >
-                            {product.Մակնիշ}
-                            {product.Մոդել},
-                            {product[" Շարժիչի ծավալը"]},
-                            {product.Տարի}
+                        <h1 style={{ fontWeight: "400", margin: "0" }}>$ {product.price}</h1>
+                        <div className="cardTitle">
+      {product.title?.map((titleItem =>
+        //  <div className="cardTitleItems">
+          <p className="cardTitleItem">{titleItem}{titleItem !== product.title[product.title.length -1 ]? "," : ""}</p>
+      // </div>
+      ))}
+  </div>
+  <div className="cardRegion">
+        {product.region?.map((regionItem =>
+          <p className="cardRegionItem">{regionItem}{regionItem !== product.region[product.region.length -1 ]? "," : ""}</p>
+      ))}
+  </div>
 
-                        </h3>
-                        <p>{product.Վազք}, {product.Շարժիչ}, {product["Փոխանցման տուփը"]}</p>
+   <div className="cardDescriptionItems">
+    {product.description?.map((descriptionItem => 
+      <p className="cardDescriptionItem">{descriptionItem}</p>
+    ))}</div>
                     </Link>
                 </div>
                 <div className="cardBasketDescriptionDate" >

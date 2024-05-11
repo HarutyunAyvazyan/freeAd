@@ -27,7 +27,7 @@ const HeaderSearchMobile = () => {
             <Link to="/"> <BiLogoShopify className="logoImage" /> </Link>
             <input placeholder="sayti anun"
                 className="headerSearchMobileInput" />
-            <Link to={"menuCategoriesMobile"} >
+            <Link to={"menuMobile"} >
                 <AiOutlineMenu
                     style={{
                         fontSize: "24px",

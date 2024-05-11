@@ -10,7 +10,7 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { getProducts } from "../../../../utils"
-import { loadFavoriteLengthFromLocalStorage } from "../../../../store/featueres/favoriteState"
+import { loadFavoriteAdLengthFromLocalStorage } from "../../../../store/featueres/favoriteState"
 import { RiCheckboxMultipleLine } from "react-icons/ri"
 import { BsShare, BsTrash3 } from "react-icons/bs"
 import CardBasket from "../../../cards/cardBasket"
@@ -29,7 +29,7 @@ const FavoriteAnnouncement = () => {
     const dispatch = useDispatch()
     const [isCheckedAll, setIsCheckedAll] = useState(false)
     const [basketChekBoxChoose, setBasketChekBoxChoose] = useState(false)
-    const historyFavorites = JSON.parse(localStorage.getItem("favorites"))
+    const historyFavorites = JSON.parse(localStorage.getItem("favorites")) || []
 
     const [favorites, setFavorites] = useState(historyFavorites)
     const favoriteProducts = getProducts().filter(product => favorites.includes(product.id));
@@ -43,7 +43,7 @@ const FavoriteAnnouncement = () => {
         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
         const updatedProductsWithChecked = productsWithChecked.filter(product => product.id !== id);
         setProductsWithChecked(updatedProductsWithChecked);
-        dispatch(loadFavoriteLengthFromLocalStorage());
+        dispatch(loadFavoriteAdLengthFromLocalStorage());
 
     };
 
@@ -75,7 +75,7 @@ const FavoriteAnnouncement = () => {
         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
         setProductsWithChecked(updatedProducts);
         handleBasketChekBoxChoose()
-        dispatch(loadFavoriteLengthFromLocalStorage());
+        dispatch(loadFavoriteAdLengthFromLocalStorage());
     }
 
     const handleBasketChekBoxChoose = () => {
@@ -91,6 +91,7 @@ const FavoriteAnnouncement = () => {
                     {!productsWithChecked.length ?
                         <h3 >duq chuneq naxntrac haytararutyunner</h3> :
                         <div className="containerBasketChaeckbox">
+                            <div style={{backgroundColor:"green"}}>
                             <div className="basketConuntProductCheckbox" >
                                 <span>{basketChekBoxChoose ? `@ntrvacner:${productsWithChecked.filter((item) => item.isChecked).length}` : "haytararutyunner"}</span>
                                 <span className="basketConuntProduct">qanak {productsWithChecked.length}</span>
@@ -133,6 +134,8 @@ const FavoriteAnnouncement = () => {
                                     <BsTrash3 onClick={handleDeleteAll} />
                                 </div>
                             </div>
+                            </div>
+                            
                             {
                                 productsWithChecked.map((product) =>
                                     <CardBasket

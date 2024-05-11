@@ -11,16 +11,25 @@ import { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import pageName from "../../../../../constants/pageName";
 import { useDispatch, useSelector } from "react-redux";
-import { loadFavoriteLengthFromLocalStorage } from "../../../../../store/featueres/favoriteState";
+import { loadFavoriteAdLengthFromLocalStorage, loadFavoriteUserLengthFromLocalStorage } from "../../../../../store/featueres/favoriteState";
+import FavoriteIcon from "./favorite";
 
 
 
 const HeaderSearch = () => {
-    const favoriteLength = useSelector(state => state.favorite.length);
+    const favoriteLength = useSelector(state => state.favorite.favoriteAdLength);
+    const favoriteUserLenght =  useSelector(state => state.favorite.favoriteUserLength)
+    console.log(favoriteLength,"aaa")
+    console.log(favoriteUserLenght,"sss")
+    const totalLength = favoriteLength + favoriteUserLenght
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(loadFavoriteLengthFromLocalStorage());
+        dispatch(loadFavoriteAdLengthFromLocalStorage());
+    }, [dispatch]);
+
+    useEffect(() => {
+        dispatch(loadFavoriteUserLengthFromLocalStorage());
     }, [dispatch]);
 
     return (
@@ -40,10 +49,11 @@ const HeaderSearch = () => {
 
                     {/* <SearchButton /> */}
                     <Link to={"favorite/ad"}>
-                        <div className="basketIcon">
+                        {/* <div className="basketIcon">
                             <SlBasket />
-                            <span className="basketCount" style={favoriteLength === 0 ? { display: "none" } : { display: "block" }}>{favoriteLength}</span>
-                        </div>
+                            <span className="basketCount" style={totalLength === 0 ? { display: "none" } : { display: "block" }}>{totalLength}</span>
+                        </div> */}
+                        <FavoriteIcon totalLength={totalLength}/>
                         {/* style={{width:"10%"}}> */}
 
                     </Link>

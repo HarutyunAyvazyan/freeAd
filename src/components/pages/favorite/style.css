@@ -83,20 +83,27 @@
 
 .favoriteMenu{
     display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 18%;
-    height: 200px;
+    flex-direction: row;
+    /* background-color: blue; */
+    width: 60%;
+    /* height: 200px; */
     border-radius: 20px;
-    position: sticky;
+    /* position: sticky; */
     top: 100px;
+    margin-bottom: 80px;
+    /* z-index: 30; */
 }
 
 .favoriteMenuItem{
-    width: 100%;
-    padding:10px
+    width: 50%;
+    padding:10px;
+    border:1px solid grey
 }
 
 .containerBasketChaeckbox{
     width:90%
+}
+.containerFvorite{
+    background-color: white;
+    width:100%;
 }

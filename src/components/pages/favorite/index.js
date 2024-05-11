@@ -12,11 +12,14 @@ import "./style.css"
 
 import { Link, NavLink, Outlet } from "react-router-dom";
 import "./style.css"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loadFavoriteLengthFromLocalStorage } from "../../../store/featueres/favoriteState";
 
 
 const Favorite = () => {
+    const favoriteAdLenght = useSelector(state => state.favorite.favoriteAdLength)
+    const favoriteUserLength = useSelector(state => state.favorite.favoriteUserLength)
+    console.log(favoriteUserLength)
     // const dispatch = useDispatch()
     // const [isCheckedAll, setIsCheckedAll] = useState(false)
     // const [basketChekBoxChoose, setBasketChekBoxChoose] = useState(false)
@@ -145,19 +148,23 @@ const Favorite = () => {
         //         </div>
         //     </div>
         // </div >
-        <div className="container" style={{ marginTop: "140px",display:"flex",flexDirection:"row",justifyContent:"space-between" }}>
+        <div className="container" style={{ marginTop: "90px", display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
             {/* <h2>Favorite Page</h2> */}
             {/* Кнопки */}
-            <div className="favoriteMenu" >
-                <NavLink to="users" className="favoriteMenuItem">Users</NavLink>
-                <NavLink to="ad" className="favoriteMenuItem">Ad</NavLink>
+            <div className="containerFvorite">
+                <h1 style={{textAlign:"left"}}>Favoritner</h1>
+                <div className="favoriteMenu" >
+                    <NavLink to="users" className="favoriteMenuItem">Ogtaterer {favoriteUserLength}</NavLink>
+                    <NavLink to="ad" className="favoriteMenuItem">Haytararutyunner {favoriteAdLenght}</NavLink>
+
+                </div>
+                <div className="favoriteContent" style={{ width: "80%", backgroundColor: "white" }}>
+                    <Outlet />
+                </div>
             </div>
 
             {/* Вложенные маршруты */}
-            <div className="favoriteContent" style={{width:"80%",backgroundColor:"white"}}>
-                <Outlet />
 
-            </div>
         </div>
     )
 }

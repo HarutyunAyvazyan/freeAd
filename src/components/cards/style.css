@@ -1,119 +1,356 @@
-
-
-.card{
-    width:240px;
-    background-color: rgb(252, 253, 255);
-    height:300px;
-    border-radius: 5px;
+.card {
+    width: 240px;
+    background-color: white;
+    height: 340px;
+    /* border-radius: 4px; */
     overflow: hidden;
     text-align: left;
     position: relative;
-
+    border: 1px solid rgb(222, 222, 222)
 }
-.card:hover .cardImage{
+
+.card:hover .cardImage {
     transform: scale(1.1);
-    overflow:hidden;
+    overflow: hidden;
     transition: linear 0.2s;
 }
 
-.cardLink{
+.card:hover {}
+
+.cardLink {
     text-decoration: none;
 
 }
 
-.cardLink:hover .cardTitle{
-    color:rgb(32, 21, 240)
-    }
-
-    .cardLink:hover .cardButton{
-        background-color:rgb(205, 203, 244)
-        }
-
-.cardIamge{
-    width:100%;
-    /* background-color: aqua; */
+.cardContainer {
+    width: 95%;
     margin: 0 auto;
-    height:180px;
+    padding: 2.5% 0;
+    height: 96%;
 }
 
-.cardDescription{
-    /* background-color: rgb(251,252,254); */
-    /* overflow:hidden;   */
-    height:auto;
-    /* padding:5px */
-    text-decoration: none;
+.cardImageDiv {
+    width: 100%-2px;
+    height: 55%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgb(222, 222, 222)
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
 
 }
-.cardPrice{
-    margin:0;
-    padding:0;
+
+.cardLink:hover .cardTitle {
+    color: rgb(32, 21, 240)
+}
+
+.cardLink:hover .cardButton {
+    background-color: rgb(205, 203, 244)
+}
+
+
+
+
+.cardPrice {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     font-size: 18px;
-    color:black
-
+    color: black;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
-.cardTitle{
-    color:rgb(37, 9, 250);
-    padding:5px 0px;
-    margin:0;
-    overflow: hidden;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-
-}
-
-.cardDescriptionSpan{
-    color:black;
+.cardTitle {
+    font-weight: 600;
     font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 94%;
+    /* overflow: hidden; */
+    margin: 0;
 }
 
-.cardButton{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:center ;
-    background-color: inherit;
-   padding:7px 0;
-   position: absolute;
-bottom: 0;
-color:rgb(63, 69, 245);
-font-size:16px;
-border:0;
-cursor: pointer;
-}
-.cardButton:hover{
+
+
+
+.cardButton:hover {
     background-color: rgb(188, 188, 244);
     transition: linear 0.1s;
 }
-.cardButtonLinkBasket{
-    color:white;
-    font-size:22px;
-}
-.cardButtonLinkHeart{
-    color:rgb(249, 1, 1);
-    font-size:22px;
-}
-.cardButtonLinkShare{
-    color:rgb(15, 197, 5);
-    font-size:22px;
-}
-.cardImageDiv{
-    width:100%;
-    height: 60%;
-    overflow: hidden;
-}
-.cardImage{
-    width:100%;
-    height:100%;
-}
 
-.cardPriceDiv{
-    width:100%;
-    /* margin-top:10px; */
+
+
+
+
+
+
+.cardPriceDiv {
+    width: 100%;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
+}
+
+
+
+
+.cardProductStatus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 0;
+    border-bottom: 1px solid rgb(228, 225, 225);
+}
+
+.cardCategoryName {
+    margin: 0;
+    font-weight: 600;
+    color: #727272;
+    font-size: 11px;
+}
+
+.cardStatus {
+    background: #aaa9a9;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 3px 10px;
+
+}
+
+.cardFavoriteIcon {
+    font-size: 18px;
+    color: rgb(92, 169, 245);
+
+}
+
+.cardFavoriteIconActive {
+    font-size: 18px;
+    color: red;
+
+}
+
+.cardFavoriteIconDiv {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, .9);
+    /* opacity: 0.8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTitle {
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin: 5px 0;
+    color:grey
+}
+
+/* .cardTitleItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+.cardTitleItem {
+
+    margin: 0
+}
+
+.cardFavoriteIconDiv:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.cardShareDiv {
+    margin: 0;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 4px;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    /* border-radius: 50%; */
+    background-color: rgb(18, 131, 245);
+    /* opacity: 0.8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardShareDiv:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.cardShare {
+    font-size: 16px;
+    color: white;
+}
+
+.cardRegion {
+
+    align-items: center;
+    text-align: left;
+    gap: 0 2px;
+    width: 100%;
+    overflow: hidden;
+    padding: 1px 0;
+    border-bottom: 1px solid rgb(228, 225, 225);
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: grey
+}
+
+.cardRegionItem {
+    margin: 0;
+    color: rgb(34, 32, 32);
+    font-size: 16px;
+}
+
+.cardDescriptionItem {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin: 0;
+    text-decoration: none;
+    color:rgb(12, 5, 5)
+
+}
+
+.cardDescriptionItems {
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
+    padding: 4px 0;
+    width: 85%;
+    padding: 0;
+    text-decoration: none;
+}
+
+.imageBoxContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.imageBoxContainer:hover .imageHoverContainer {
+    display: block;
+}
+
+.imageBoxContainerImage {
+    width: 100%;
+    height: 100%;
+}
+
+.imageHoverContainer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.imageHoverContainer:hover {
+    display: flex;
+}
+
+.imageHoverButtonDiv {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+
+}
+
+.imageHoverButton {
+    width: 92%;
+    height: 3px;
+    position: absolute;
+    bottom: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255, .7);
+}
+
+.activeButton {
+    width: 92%;
+    height: 3px;
+    position: absolute;
+    bottom: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(18, 131, 245);
+}
+
+.imageBoxCountIcon {
+    color: white;
+    font-size: 70px;
+}
+
+.imageBoxCountDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 25, 27, 0.6);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imageBoxCountText {
+    color: white;
+    font-size: 16px;
+}
+
+
+@media(max-width:580px) {
+
+    .card {
+        width: 49%;
+        height: 280px
+    }
+
+    .cardImageDiv {
+        height: 50%;
+    }
+
 }

@@ -9,6 +9,7 @@ import { useState } from "react";
 
 
 const HeaderBar = ({ countBasket }) => {
+    
 
     const isLoggedIn = localStorage.getItem("user")
     // console.log(isLoggedIn)
@@ -18,17 +19,17 @@ const HeaderBar = ({ countBasket }) => {
         setIsOpen(!isOpen);
         // console.log(isOpen, "enter")
     };
-    const handleMouseEnter = () => {
+    const handleClickUser = () => {
         toggleModal();
         // console.log(isOpen, "enter")
 
     }
 
-    const handleMouseLeave = () => {
-        toggleModal();
-        // console.log(isOpen, "leave")
+    // const handleMouseLeave = () => {
+    //     toggleModal();
+    //     // console.log(isOpen, "leave")
 
-    }
+    // }
     return (
         <header className="layout">
             <div className="headerLinksDiv">
@@ -45,11 +46,12 @@ const HeaderBar = ({ countBasket }) => {
                         <div className="registrationLinks">
 
                             {/* <Link to="/userPage" className="navbarLink"> */}
-                            {isLoggedIn ? <div className="user" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                                <FaUser className="userIcon" />
+                            {isLoggedIn ?
+                                <div className="user" onClick={handleClickUser}>
+                                    <FaUser className="userIcon" />
 
-                                <UserMenuDropDown isOpen={isOpen} toggleModal={toggleModal} />
-                            </div>
+                                    <UserMenuDropDown isOpen={isOpen} toggleModal={toggleModal} setIsOpen={setIsOpen} className="userMenuDropDown" />
+                                </div>
                                 : <div className="registrationSigninSignup">
                                     <Link to="/signin" className="navbarLink">Signin</Link>
                                     <Link to="/signup" className="navbarLink">Signup</Link>

@@ -50,7 +50,7 @@ const ModalMenu = ({ toggleModal, handleMouseEnterModal, handleMouseLeaveModal, 
           categories.map((category, index) => (
             currentTab === category.id &&
             <div className="tabcontent" key={category.id} >
-              <Link to={pageName.categoryPage}
+              <Link to={`/Categories/${category.name}`}
                 onClick={toggleModal}
 
               >
@@ -62,11 +62,12 @@ const ModalMenu = ({ toggleModal, handleMouseEnterModal, handleMouseLeaveModal, 
                 {category.subCategories.map((subCategory, index) => (
                   <div className="tabItem" key={subCategory.id}
                   >
-                    {/* <Link to={`subCategoryPage`} */}
-                    {/* onClick={toggleModal} */}
-                    {/* >  */}
+                    <Link 
+                    to={`/Category/${subCategory.name}`}
+                    onClick={toggleModal}
+                     >  
                     <h4 >{subCategory.name}</h4>
-                    {/* </Link> */}
+                    </Link>
                     <div >
                       <ul className="subCategoryUl" >
                         {subCategory.subCategories.map((subCategoryLink, index) => (
@@ -74,7 +75,7 @@ const ModalMenu = ({ toggleModal, handleMouseEnterModal, handleMouseLeaveModal, 
                             key={index}
                             className="subCategoryLink"
                             onClick={toggleModal}
-                            to={pageName.subCategory}>
+                            to={`/categori/${subCategory.id}`}>
                             <li className="subCategoryLi" >
                               <div >
                                 {subCategoryLink}

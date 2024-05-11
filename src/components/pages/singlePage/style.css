@@ -2,11 +2,12 @@
     margin-top: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    width:100%
 }
 
 .swiperSinglePage {
-    width: 80%;
+    width: 90%;
     height: 400px;
 }
 
@@ -22,16 +23,19 @@
 }
 
 .singlePageUser {
-    width: 30%;
-    /* background-color: rgb(243, 248, 254); */
+    width: 36%;
+    background-color: white;
     flex-direction: column;
     display: flex;
     align-items: center;
+    height: 600px;
+    position: sticky;
+    top:90px
 }
 
 .singlePageAnnouncement {
     width: 60%;
-    /* background-color: rgb(243, 248, 254); */
+    background-color: rgb(246, 250, 255);
 }
 
 .singlePageAnnouncementPrice {
@@ -62,11 +66,10 @@
 }
 
 .singlePageAnnouncementDescription {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     flex-direction: column;
-    width: 80%;
+    width: 86%;
     margin: 0 auto;
-    /* background-color: aqua; */
 }
 
 .singlePageAnnouncementTitle {
@@ -111,4 +114,55 @@ background-color: white;
 }
 .singlePageUsersCommentsTitle{
 margin-top:100px
+}
+
+.descriptionTitleGroup{
+    margin: 40px 0;
+}
+
+
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image-container {
+  margin-bottom: 20px;
+  width: 400px; /* Ширина контейнера */
+  height: 400px; /* Высота контейнера */
+  overflow: hidden; /* Скрываем часть изображения, выходящую за пределы контейнера */
+}
+
+.main-image {
+  width: 100%; /* Растягиваем изображение на всю ширину контейнера */
+  height: 100%; /* Растягиваем изображение на всю высоту контейнера */
+  background-size: cover; /* Масштабируем изображение так, чтобы оно полностью покрывало фон */
+  background-position: center; /* Центрируем изображение */
+}
+
+.thumbnails {
+  display: flex;
+}
+
+.thumbnail {
+  width: 50px; /* Ширина миниатюры */
+  height: 50px; /* Высота миниатюры */
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  border: 2px solid blue; /* Стиль активной миниатюры */
+}
+
+.slider {
+  margin-top: 20px;
+}
+
+.slider button {
+  font-size: 24px;
+  margin: 0 5px;
+  cursor: pointer;
 }

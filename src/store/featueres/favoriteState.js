@@ -3,15 +3,23 @@ import { createSlice } from '@reduxjs/toolkit';
 const favoriteState = createSlice({
   name: 'favorites',
   initialState: {
-    length: 0,
+    favoriteAdLength: 0,
+    favoriteUserLength:0,
   },
   reducers: {
     setFavoriteLength: (state, action) => {
-      state.length = action.payload;
+      state.favoriteAdLength = action.payload;
     },
-    loadFavoriteLengthFromLocalStorage: state => {
+    loadFavoriteAdLengthFromLocalStorage: state => {
       const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-      state.length = favorites.length;
+      state.favoriteAdLength = favorites.length;
+    },
+    setFavoriteLengthUser:(state, action) =>{
+      state.favoriteUserLength = action.payload;
+    },
+    loadFavoriteUserLengthFromLocalStorage: state => {
+      const favorites = JSON.parse(localStorage.getItem("favUs")) || [];
+      state.favoriteUserLength = favorites.length;
     },
   },
     // addFavorite: (state, action) => {
@@ -48,6 +56,6 @@ const favoriteState = createSlice({
   
 });
 
-export const { setFavoriteLength, loadFavoriteLengthFromLocalStorage} = favoriteState.actions;
+export const { setFavoriteLength, loadFavoriteAdLengthFromLocalStorage,setFavoriteLengthUser,loadFavoriteUserLengthFromLocalStorage} = favoriteState.actions;
 
 export default favoriteState.reducer;

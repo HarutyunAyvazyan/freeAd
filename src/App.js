@@ -16,7 +16,7 @@ import SubCategorySubCategoryPage from './components/categories/subCtegorySubCat
 import MenuCategoryMobile from './components/layout/header/headerMobile/menuCategoriesMobile';
 import MenuSubCategoryMobile from './components/layout/header/headerMobile/menuSubCategoriesMobile';
 import UserMenuDropDown from './components/pages/userPage/userMenuDropDown';
-import AnnouncementUserPage from './components/pages/userPage/userMenuDropDown/announcement';
+import AnnouncementUserPage from './components/pages/userPage/announcement';
 import SettingsUserPage from './components/pages/userPage/settings';
 import Top from './components/pages/top';
 import ForBusiness from './components/pages/forBusiness';
@@ -32,22 +32,29 @@ import pageName from './constants/pageName';
 import Favorite from './components/pages/favorite';
 import FavoriteUsers from './components/pages/favorite/favoriteUsers';
 import FavoriteAnnouncement from './components/pages/favorite/favoriteAnnouncement';
+import Profile from './components/pages/profile';
+import ProfileSettings from './components/pages/userPage/settings';
+import ProfileNotifications from './components/pages/userPage/notifications';
+import ProfileReviews from './components/pages/userPage/reviews';
+import ProfileAnnouncement from './components/pages/userPage/announcement';
+import ProfileMessage from './components/pages/userPage/message';
+import ProfileWallet from './components/pages/userPage/wallet';
 
 
 function App() {
-  const [basket,setBasket] = useState([])
+  const [basket, setBasket] = useState([])
   // const [basketProducts,setBasketProducts] = useState([])
   // const [like,setLike] = useState(false)
- 
+
 
   // useEffect(()=>{
   //   setLike(!like)
   // },like)
 
   const handleClickLike = (id) => {
-   !basket.includes(id) ? basket.push(id) :basket.splice(basket.indexOf(id),1)
-  //  setBasketProducts(getProducts().filter((product) => basket.includes(product.id)))
-      // setLike(!like)
+    !basket.includes(id) ? basket.push(id) : basket.splice(basket.indexOf(id), 1)
+    //  setBasketProducts(getProducts().filter((product) => basket.includes(product.id)))
+    // setLike(!like)
   }
 
   return (
@@ -55,44 +62,49 @@ function App() {
       <Routes>
         <Route path={pageName.home} element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path={pageName.about} element ={<AboutUs/>}/>
+          <Route path={pageName.about} element={<AboutUs />} />
           <Route path={pageName.forYou} element={<ForYou />} />
           <Route path={pageName.top} element={<Top />} />
           <Route path={pageName.forBusiness} element={<ForBusiness />} />
-          <Route path={pageName.product} element={<SinglePage />} />
-          <Route path={pageName.user} element={<AnotherUserPage  handleClickLike={handleClickLike}  />} />
-          <Route path={pageName.notFound} element={<NotFound/>} />
+          <Route path={pageName.productPage} element={<SinglePage />} />
+          <Route path={pageName.userPage} element={<AnotherUserPage handleClickLike={handleClickLike} />} />
+          <Route path={pageName.notFound} element={<NotFound />} />
 
 
 
           <Route path={pageName.signIn} element={<Signin />} />
           <Route path={pageName.signUp} element={<Signup />} />
-          <Route path = {pageName.addAnnouncement} element = {<Announcement/>}/>
-          <Route path = {pageName.theLawsOfTheAnnouncement} element = {<TheLawsOfTheAnnouncement/>}/>
+          <Route path={pageName.addAnnouncement} element={<Announcement />} />
+          <Route path={pageName.theLawsOfTheAnnouncement} element={<TheLawsOfTheAnnouncement />} />
 
-          <Route path = {pageName.addAnnouncementForm} element = {<FormHouse/>}/>
+          <Route path={pageName.addAnnouncementForm} element={<FormHouse />} />
 
-          <Route path = {pageName.favorite} element = {<Favorite basket={basket}/>}>
-          <Route path="users" element={<FavoriteUsers />} />
-          <Route path="ad" element={<FavoriteAnnouncement />} />
+          <Route path={pageName.favorite} element={<Favorite basket={basket} />}>
+            <Route path="users" element={<FavoriteUsers />} />
+            <Route path="ad" element={<FavoriteAnnouncement />} />
+          </Route>
+
+          <Route path={pageName.menuCategoriesMobile} element={<MenuCategoryMobile />} />
+          <Route path={pageName.menuSubCategoriesMobile} element={<MenuSubCategoryMobile />} />
+
+          <Route path={pageName.categoryPage} element={<CategoryPage />} />
+          <Route path={pageName.subCategoryPage} element={<SubCategoryPage />} />
+          <Route path={pageName.subCategory} element={<SubCategorySubCategoryPage />} />
+          {/* <Route path = "/userPage" element = {<UserMenuDropDown/>}/> */}
+          <Route path={pageName.profile} element={<Profile />} >
+            <Route path={pageName.profileAnnouncement} element={<ProfileAnnouncement />} />
+            <Route path={pageName.profileNotifications} element={<ProfileNotifications />} />
+            <Route path={pageName.profileReviews} element={<ProfileReviews />} />
+            <Route path={pageName.profileMessage} element={<ProfileMessage />} />
+            <Route path={pageName.profileWallet} element={<ProfileWallet />} />
+            <Route path={pageName.profileSettings} element={<ProfileSettings />} />
 
           </Route>
-          
-          <Route path= {pageName.menuCategoriesMobile} element = {<MenuCategoryMobile/>}/>
-          <Route path={pageName.menuSubCategoriesMobile} element = {<MenuSubCategoryMobile/>}/>
-
-          <Route path = {pageName.categoryPage} element = {<CategoryPage/>}/>
-          <Route path = {pageName.subCategory} element = {<SubCategoryPage/>}/>
-          {/* <Route path = "subCategorySubCategoryPage" element = {<SubCategorySubCategoryPage/>}/> */}
-          {/* <Route path = "/userPage" element = {<UserMenuDropDown/>}/> */}
-          <Route path = {pageName.announcementUserPage} element = {<AnnouncementUserPage/>}/>
-          <Route path = {pageName.settingsUserPage} element = {<SettingsUserPage/>}/>
-
 
 
 
         </Route>
-      </Routes>      
+      </Routes>
     </div>
   );
 }

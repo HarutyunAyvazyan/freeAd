@@ -34,14 +34,19 @@ const SearchInput = () => {
         localStorage.setItem("searchHistory", JSON.stringify(updatedSearchHistory));
     };
 
-    const removeLocalStorageItem = (valueToRemove) => {
+    const removeLocalStorageItem = (e, valueToRemove) => {
+        setRemoveClicked(!removeClicked)
+        e.preventDefault()
         const updatedSearchHistory = searchHistoryArray.filter(value => value !== valueToRemove);
         setSearchHistoryArray(updatedSearchHistory);
         localStorage.setItem("searchHistory", JSON.stringify(updatedSearchHistory));
-        // setRemoveClicked(true);
+        e.preventDefault()
+        setOpenModal(true)
+        setRemoveClicked(true)
     };
 
-    const searchHistoryRemoveAll = () => {
+    const searchHistoryRemoveAll = (e) => {
+        e.preventDefault()
         localStorage.removeItem("searchHistory");
         setSearchHistoryArray([]);
         // setRemoveClicked(true);
@@ -55,6 +60,13 @@ const SearchInput = () => {
     // };
 
     // console.log(inputTouched,"totototot")
+    const onBlur = (event) => {
+            setTimeout(() => {
+                // alert(removeClicked)
+                setOpenModal(false)
+            }, 300)
+        
+    }
     return (
         <form className="searchInputDiv" onSubmit={onSubmit}>
             {/* <AllCategoryButton /> */}
@@ -65,14 +77,14 @@ const SearchInput = () => {
                     setOpenModal={setOpenModal}
                     handleChange={handleChange}
                     inputValue={inputValue}
-                    // handleBlur={handleBlur}
-                />
-                <SearchButton  openModal={openModal}/>
+                    onBlur={onBlur} />
+                <SearchButton openModal={openModal} />
                 <SearchResults
                     openModal={openModal}
                     removeLocalStorageItem={removeLocalStorageItem}
                     searchHistoryRemoveAll={searchHistoryRemoveAll}
                     setOpenModal={setOpenModal}
+                    setRemoveClicked={setRemoveClicked}
                 />
             </div>
 
