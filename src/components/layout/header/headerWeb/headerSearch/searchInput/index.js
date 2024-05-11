@@ -32,7 +32,13 @@ const SearchInput = () => {
         e.preventDefault();
         setOpenModal(false);
         setInputValue("");
-        const updatedSearchHistory = [...searchHistoryArray, inputValue];
+
+        let updatedSearchHistory = [...searchHistoryArray];
+
+        if(!searchHistoryArray.includes(inputValue)) {
+            updatedSearchHistory = [...updatedSearchHistory, inputValue];
+        };
+
         setSearchHistoryArray(updatedSearchHistory);
         localStorage.setItem("searchHistory", JSON.stringify(updatedSearchHistory));
     };

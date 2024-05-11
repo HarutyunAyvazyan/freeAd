@@ -3,7 +3,7 @@ import { FaSearch } from 'react-icons/fa';
 import "./style.css"
 
 
-const SearchBar = ({ setOpenModal, handleChange, inputValue, onBlur }) => {
+const SearchBar = ({ setOpenModal, handleChange, inputValue }) => {
     return (
         <div className='searchBar' >
             <FaSearch className="searchIcon" />
@@ -13,7 +13,6 @@ const SearchBar = ({ setOpenModal, handleChange, inputValue, onBlur }) => {
                 value={inputValue}
                 className="searcInput"
                 onClick={() => setOpenModal(true)}
-                // onBlur={(event) => onBlur(event)}
             />
         </div>
     )
