@@ -76,9 +76,7 @@ function App() {
           <Route path={pageName.signUp} element={<Signup />} />
           <Route path={pageName.addAnnouncement} element={<Announcement />} />
           <Route path={pageName.theLawsOfTheAnnouncement} element={<TheLawsOfTheAnnouncement />} />
-
           <Route path={pageName.addAnnouncementForm} element={<FormHouse />} />
-
           <Route path={pageName.favorite} element={<Favorite basket={basket} />}>
             <Route path="users" element={<FavoriteUsers />} />
             <Route path="ad" element={<FavoriteAnnouncement />} />
