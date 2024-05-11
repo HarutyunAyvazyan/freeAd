@@ -8,23 +8,28 @@ import { useState } from "react";
 
 
 
-const HeaderBar = () => {
+const HeaderBar = ({ countBasket }) => {
+    
+
+    const isLoggedIn = localStorage.getItem("user")
+    // console.log(isLoggedIn)
+
     const [isOpen, setIsOpen] = useState(false);
     const toggleModal = () => {
         setIsOpen(!isOpen);
-        console.log(isOpen,"enter")
+        // console.log(isOpen, "enter")
     };
-    const handleMouseEnter = () => {
+    const handleClickUser = () => {
         toggleModal();
-        console.log(isOpen,"enter")
+        // console.log(isOpen, "enter")
 
     }
 
-    const handleMouseLeave = () => {
-        toggleModal();
-        console.log(isOpen,"leave")
+    // const handleMouseLeave = () => {
+    //     toggleModal();
+    //     // console.log(isOpen, "leave")
 
-    }
+    // }
     return (
         <header className="layout">
             <div className="headerLinksDiv">
@@ -39,25 +44,30 @@ const HeaderBar = () => {
                             <Link to="/forYou" className="navbarLink">For You</Link>
                         </div>
                         <div className="registrationLinks">
-                            <div className="registrationSigninSignup">
-                                <Link to="/signin" className="navbarLink">Signin</Link>
-                                <Link to="/signup" className="navbarLink">Signup</Link>
-                                {/* <Link to="/userPage" className="navbarLink"> */}
-                                <div className="user" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+
+                            {/* <Link to="/userPage" className="navbarLink"> */}
+                            {isLoggedIn ?
+                                <div className="user" onClick={handleClickUser}>
                                     <FaUser className="userIcon" />
 
-                                    <UserMenuDropDown isOpen={isOpen} toggleModal={toggleModal} />
+                                    <UserMenuDropDown isOpen={isOpen} toggleModal={toggleModal} setIsOpen={setIsOpen} className="userMenuDropDown" />
                                 </div>
-                                {/* </Link> */}
-                            </div>
-                            <Link to="/announcement" className="navbarLink">Announcement</Link>
+                                : <div className="registrationSigninSignup">
+                                    <Link to="/signin" className="navbarLink">Signin</Link>
+                                    <Link to="/signup" className="navbarLink">Signup</Link>
+                                </div>
+
+                            }
+
+                            {/* </Link> */}
+                            <Link to="/theLawsOfTheAnnouncement" className="navbarLink">Announcement</Link>
                         </div>
                     </div>
                 </div>
 
             </div>
             {/* <div className="headerSearchDiv"> */}
-            <HeaderSearch />
+            <HeaderSearch countBasket={countBasket} />
             {/* </div> */}
 
         </header>

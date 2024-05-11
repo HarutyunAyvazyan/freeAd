@@ -21,8 +21,8 @@ const SubCategoryPage = () => {
 
     return (
         <div className="container">
-  <div className="subCategoryPage">
-              <div className="categoryPageMenuCategories">
+  <div className="subCategoryPage" style={{marginTop:"200px"}}>
+              {/* <div className="categoryPageMenuCategories">
                 <Link to={"/"} className="categoryPageMenuCategoriesArrow"><h6>GLXAVOR</h6><IoIosArrowForward/> </Link> 
                 <Link  to={`/${categoryName}`} className="categoryPageMenuCategoriesArrow"><h6>{categoryName}</h6> <IoIosArrowForward/></Link>
                 <h6>{subCategoryName}</h6>
@@ -44,7 +44,8 @@ const SubCategoryPage = () => {
                         ))}
                     </div>
                 ))
-            }
+            } */}
+            subCategory page
         </div >
         </div>
       

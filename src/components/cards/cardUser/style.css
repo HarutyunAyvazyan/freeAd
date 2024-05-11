@@ -1,0 +1,125 @@
+
+.cardUser{
+    width:360px;
+    height: 460px;
+    /* border:2px solid rgb(154, 214, 246); */
+    background-color: white;
+    border-radius: 6px;
+    overflow:hidden;
+    position: sticky;
+    top:100px;
+    padding-bottom: 20px;
+
+}
+
+.cardUserGradient{
+    background-image: linear-gradient(#91baff,#205fff);
+    height: 120px;
+
+}
+
+.cardUserDescription{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+
+.cardUserImageDiv{
+    height: 120px;
+    width:120px;
+    border-radius: 100px;
+    background-color: white;
+    margin-top: -75px;
+    padding: 5px;
+   
+}
+
+.cardUserImage{
+    width:100%;
+    height: 100%;
+    border-radius: 100px; 
+}
+
+.cardUserIcon{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background-color: rgb(213, 223, 237);
+    border-radius: 100px;
+
+}
+
+
+
+.userButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+.userButtonCall{
+width:90%;
+height: 60px;
+border: 0;
+background-color:rgb(2,209,92);
+cursor:pointer;
+border-radius: 4px;
+font-size: 20px;
+color:white
+
+}
+.userButtonMessage{
+    width:90%;
+    height: 60px;
+    border: 0;
+    background-color: rgb(18, 131, 245);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+color:white;
+}
+.rat{
+    font-size: 20px;
+    margin:0 5px ;
+    color:rgb(205, 205, 27)
+}
+
+
+.cardUserFavoriteIconDiv{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 3;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, .9);
+    /* opacity: 0.8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardUserFavoriteIcon{
+    font-size: 20px;
+    color:#4d4e50
+}
+
+.cardUserFavoriteIconActive{
+    font-size: 20px;
+    color:red
+}
+
+.cardUserName{
+    margin:0;
+    font-size: 20px;
+font-weight: 00;}

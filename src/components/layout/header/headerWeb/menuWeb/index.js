@@ -4,11 +4,12 @@ import Categories from "../../../../../constants/stateCategories";
 import "./style.css"
 import { Link } from "react-router-dom";
 import { MdArrowForwardIos } from "react-icons/md";
+import pageName from "../../../../../constants/pageName";
 
 
 
 
-const ModalMenu = ({ toggleModal }) => {
+const ModalMenu = ({ toggleModal, handleMouseEnterModal, handleMouseLeaveModal, enter }) => {
   const [categories, setCategories] = useState(Categories)
   const [currentTab, setCurrentTab] = useState(1)
 
@@ -23,21 +24,24 @@ const ModalMenu = ({ toggleModal }) => {
 
   return (
     <div className="container">
-      <div className="mainModalDiv">
+      <div className="mainModalDiv" onMouseEnter={handleMouseEnterModal} onMouseLeave={handleMouseLeaveModal} >
         <span className="close" onClick={toggleModal}>&times;</span>
         <div className="buttonsDiv">
           {categories.map((category, index) => (
-            <button key={index} className="categoryButton" id={category.id} onMouseEnter={() => handleMouseEnter(category.id)} >
+            <button className="categoryButton" id={category.id} onMouseEnter={() => handleMouseEnter(category.id)} key={index}>
               {/* <IoHome /> */}
               <img src={category.pathImg} alt='' width='30px' height='30px' />
               <div style={{
-                width: "70%",
+                width: "85%",
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-between"
-              }}>
+                justifyContent: "space-between",
+                alignItems: "center"
+              }}
+                key={index}
+              >
                 <span className="categoryButtonText">{category.name}</span>
-                <MdArrowForwardIos />
+                <MdArrowForwardIos className="categoryButtonArrow" />
               </div>
             </button>
           ))}
@@ -45,35 +49,37 @@ const ModalMenu = ({ toggleModal }) => {
         {
           categories.map((category, index) => (
             currentTab === category.id &&
-            <div className="tabcontent" key={index}>
-              <Link to={`${category.name}`}
+            <div className="tabcontent" key={category.id} >
+              <Link to={`/Categories/${category.name}`}
                 onClick={toggleModal}
+
               >
-                <h2>{category.name}</h2>
+                <h2 >{category.name}</h2>
               </Link>
               <div className="tabItems"
                 style={currentTab === category.id ? { display: "flex" } : { display: "none" }}
               >
                 {category.subCategories.map((subCategory, index) => (
-                  <div className="tabItem"
-                    key={index}>
-                    <Link to={`${category.name}/${subCategory.name}`}
-                      onClick={toggleModal}
-                    > <h4>{subCategory.name}</h4>
+                  <div className="tabItem" key={subCategory.id}
+                  >
+                    <Link 
+                    to={`/Category/${subCategory.name}`}
+                    onClick={toggleModal}
+                     >  
+                    <h4 >{subCategory.name}</h4>
                     </Link>
                     <div >
-                      <ul className="subCategoryUl">
+                      <ul className="subCategoryUl" >
                         {subCategory.subCategories.map((subCategoryLink, index) => (
-                          <Link key={index}
+                          <Link
+                            key={index}
                             className="subCategoryLink"
                             onClick={toggleModal}
-                            to={`/${category.name}/${subCategory.name}/${subCategoryLink}`}>
+                            to={`/categori/${subCategory.id}`}>
                             <li className="subCategoryLi" >
-                              <div>
-                              {subCategoryLink}
-
+                              <div >
+                                {subCategoryLink}
                               </div>
-                              {/* {console.log(subCategoryLink, "l")} */}
                             </li>
                           </Link>
                         ))}

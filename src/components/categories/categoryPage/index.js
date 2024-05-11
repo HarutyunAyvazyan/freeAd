@@ -8,7 +8,7 @@ const CategoryPage = () => {
     const { categoryName } = useParams()
     console.log(categoryName, "categorId")
     return (
-        <div className="container">
+        <div className="container" style={{marginTop:"200px"}}>
             <div className="categoryPage">
                 <div className="categoryPageMenuCategories">
                     <Link to={"/"} className="categoryPageMenuCategoriesArrow"><h6>GLXAVOR</h6><IoIosArrowForward /> </Link>
@@ -16,10 +16,12 @@ const CategoryPage = () => {
                 </div>
                 {Categories.map((category) => (
                     // console.log(category.name)
+
                     categoryName === `${category.name}` &&
-                    
+                  
+                    // <h3>{categoryName}</h3>
                             category.subCategories.map((subCategory) => (
-                                <Link to={`/${category.name}/${subCategory.name}`}>
+                                <Link to={`/Category/${subCategory.name}`}>
                                     <div>
                                         <h4>
                                             {subCategory.name}
@@ -29,6 +31,7 @@ const CategoryPage = () => {
                             ))
                 ))}
             </div>
+            category page
         </div>
 
 

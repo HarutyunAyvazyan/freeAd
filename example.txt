@@ -1,0 +1,114 @@
+db
+
+const real_estate = [
+    {
+        id: 1,
+        category_name: "",
+        subbcategory_name: "plot of land",
+        status: "sale",
+        price: "",
+        description: "",
+        title: "",
+        images: [],
+        makeres: 0,
+        buildyng_type: "",
+        address: "",
+        title: [buildyng_type],
+        key: [
+            sub_key: {
+                nest: ""
+            },
+             sub_key: {
+                mark: ""
+            },
+        ]
+    },
+    {
+        id: 2,
+        category_name: "",
+        subbcategory_name: "house",
+        status: "rent",
+        price: "",
+        description: "",
+        images: [],
+        makeres: 0,
+        buildyng_type: "",
+        address: "",
+        title: [buildyng_type],
+        key: [
+            sub_key: {
+                nest: ""
+            },
+             sub_key: {
+                mark: ""
+            },
+        ]
+    },
+];
+
+
+const transport = [
+    {
+        id: 1,
+        category_name: "",
+        subbcategory_name: "",
+        price: "",
+        description: "",
+        images: [],
+        model: "",
+        date: "",
+        color: "",
+        address: "",
+        title: [model],
+        key: [
+            sub_key: {
+                nest: ""
+            },
+             sub_key: {
+                mark: ""
+            },
+        ]
+    },
+];
+
+
+const animals = [
+    {
+        id: 1,
+        category_name: "",
+        subbcategory_name: "",
+        price: "",
+        description: "",
+        images: [],
+        address: "",
+        category: "", 
+        title: [category]
+        key: [
+            sub_key: {
+                nest: ""
+            },
+             sub_key: {
+                mark: ""
+            },
+        ]
+    },
+];
+
+
+
+Props
+    card: [
+        id: "",
+        title: [],
+        price: "",
+        description: "",
+        images: []
+    ]
+
+
+    single page: [
+        id: "",
+        address: "",
+        price: "",
+        key: key,
+    ]

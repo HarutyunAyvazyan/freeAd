@@ -1,0 +1,137 @@
+.cardBasket {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(198, 199, 204);
+    border-radius: 5px;
+    ;
+    padding: 5px;
+    width: 90%;
+    margin: 0 auto;
+    height: 220px;
+    background-color: rgb(252, 253, 255);
+}
+
+.cardBasketImageDiv {
+    width: 240px;
+    height: 100%;
+    position: relative;
+
+}
+
+.cardBasketDescription {
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+.cardBasketImage {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid rgb(188, 204, 249); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardBasketImageCheckBoxDiv {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 244, 250,.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cardBasketImageCheckBox {
+    font-size: 24px;
+    color: blueviolet;
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+.cardBasketDescription {
+    margin-left: 5px;
+    position: relative;
+}
+
+.cardBasketDescriptionCategoryName {
+    font-size: 12px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(248, 238, 251);
+    height: 8%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cardBasketDescriptionDate {
+    /* margin-top:60px; */
+    width: 100%;
+    /* position: absolute; */
+    /* bottom:0; */
+    /* right:20px; */
+    /* left:10px; */
+    border-top: 1px solid rgb(248, 238, 251);
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 8%
+}
+
+.cardBasketDescriptionContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 84%
+}
+
+.cardBasketDescriptionIcon {
+    display: none;
+}
+
+
+.cardBasketIconDelete:hover {
+    /* font-size: 24px; */
+    color: red;
+    transition: linear 0.1s;
+}
+
+.cardBasketIconShare:hover {
+    transition: linear 0.1s;
+    color: black;
+}
+
+.cardBasketDescriptionContentMain {
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    text-decoration: none;
+
+}
+
+.cardBasketLink {
+    text-decoration: none;
+    /* width: 100%; */
+}
+
+.cardBasket:hover .cardBasketDescriptionIcon {
+    display: block;
+    font-size: 22px;
+    color: rgb(173, 164, 164);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 0 50px;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+}
+.cardBasketIconDisplay{
+    display: none;
+}

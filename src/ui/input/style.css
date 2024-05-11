@@ -1,11 +1,11 @@
 .input{
     width:100%;
-    background-color: #bcc4e7;
+    background-color: #f4f4fb;
     border:1px solid rgb(18, 131, 245);
     border-radius:5px;
     height:35px;
     margin-bottom:20px;
-    color:white
+    color:rgb(23, 7, 7)
 }
 
 .inputTitle {
@@ -20,5 +20,15 @@
     flex-direction: column;
     gap:10px;
     margin:auto 0
+}
+
+.errors{
+    border:1px solid red;
+    width:100%;
+    background-color: #f4f4fb;
+    border-radius:5px;
+    height:35px;
+    margin-bottom:20px;
+    color:rgb(23, 7, 7)
 }
 

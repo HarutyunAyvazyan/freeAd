@@ -1,0 +1,89 @@
+
+.selectInput{
+    position: relative;
+    width:200px;
+    height: 36px;
+    border:1px solid grey;
+   border-radius: 3px;
+   background-color: aqua;
+
+
+}
+
+
+
+.selectContentClose{
+    display: none
+}
+
+.selectContentOpen{
+    position: absolute;
+    width:100%;
+    height:200px;
+    overflow: auto;
+    background-color: rgb(233, 220, 203);
+    top: 38px;
+    left:-1px;
+    border:1px solid grey;
+   border-radius: 3px;
+   /* padding:10px 0; */
+   z-index: 100;
+}
+
+.select{
+    margin:200px;
+    /* width: 200px; */
+}
+
+.selectCintentItems{
+    list-style-type: none;
+margin:0;
+padding:0
+}
+.selectContentItem{
+    padding:10px 0;
+    background-color: aliceblue;
+    list-style-type: none;
+    /* width:100%; */
+    /* border:1px solid grey */
+}
+.selectContentItem:hover{
+    background-color: blue;
+
+}
+.custom-select {
+    position: relative;
+    width: 200px;
+    margin:500px
+  }
+  
+  .selected-option {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .options {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 999;
+  }
+  
+  .options.top {
+    bottom: 100%;
+  }
+  
+  .options.bottom {
+    top: 100%;
+  }
+  
+  .option {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }

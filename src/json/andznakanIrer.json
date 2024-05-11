@@ -1,0 +1,417 @@
+[
+    {
+        "id": 1,
+        "categoryName": "andznakan irer",
+        "subCategoryNhagust":"hagust",
+        "status": "kanaci",
+        "userId": 10,
+        "price": 5800987,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnhMC09WBy-gnl56cEROgzA3zGmqrYZO7MuQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQd3Pc3eo-v8wL2Fpr7aMmeSByUkwGRNNkw&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzLS6M9XN2rHRVuldDXYaGxsPrYpJucuMotw&usqp=CAU"
+        ],
+       
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 2,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "hagust",
+        "status": "kanaci",
+        "userId": 2,
+        "images": "",
+        "price": 488000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "alaverdi"
+        ]
+    },
+    {
+        "id": 3,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "hagust",
+        "status": "kanaci",
+        "userId": 4,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQd3Pc3eo-v8wL2Fpr7aMmeSByUkwGRNNkw&usqp=CAU"
+        ],
+        "price": 158000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 4,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "kosmetika",
+        "status": "kanaci",
+        "userId": 2,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzLS6M9XN2rHRVuldDXYaGxsPrYpJucuMotw&usqp=CAU"
+        ],
+        "price": 108000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 5,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "kosmetika",
+        "status": "kanaci",
+        "userId": 1,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWvXPvaOgSHBOtQcBlDsRf6HFydIBE4A7XOQ&usqp=CAU"
+        ],
+        "price": 98000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 6,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "hagust",
+        "status": "txamardkanc",
+        "userId": 3,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQunxTxM7Oyzhh5s7xRVQWQnQ9TK1zvHsFC_g&usqp=CAU"
+        ],
+        "price": 88000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 7,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "hagust",
+        "status": "txamardkanc",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngJVhqNNgMoaNur-O7c12sAmRF_nhsAJKFw&usqp=CAU"
+        ],
+        "price": 78000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 8,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "kosmetika",
+        "status": "txamardkanc",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6SAYAwwVID9i7thhTpiRoKOFTUnNW69-XeQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngJVhqNNgMoaNur-O7c12sAmRF_nhsAJKFw&usqp=CAU"
+        ],
+        "price": 60000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 9,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "hagust",
+        "status": "txamardkanc",
+        "userId": 10,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfFj0Jm_g0R_CmpQEGV10wZggFlTVhwm_4hA&usqp=CAU"
+        ],
+        "price": 50000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 10,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "hagust",
+        "status": "txamardkanc",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKsCTs_Fd8i6TlcywjxVhFqvGWD0I6LJUoA&usqp=CAU"
+        ],
+        "price": 40000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 11,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "txamardkanc",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7tTAfIHmRRL3PgoT8KI-FzqCeUD6F017SIg&usqp=CAU"
+        ],
+        "price": 30000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 16,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "txamardkanc",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxrB0zInpUtygJhe7ppX9MkxScQKT-tBv3Mg&usqp=CAU"
+        ],
+        "price": 20000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 18,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "txamardkanc",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwKn0U5oTi_kFeXI_5wke7Fy5CxvNnL2_VzQ&usqp=CAU"
+        ],
+        "price": 10000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    },
+    {
+        "id": 14,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "kanaci",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA5lcymKpDFbIGnxY8_K4fVqyhOMocBJHxew&usqp=CAU"
+        ],
+        "price": 8000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    }, {
+        "id": 20,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "bnakaranner",
+        "status": "vacharq",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwKn0U5oTi_kFeXI_5wke7Fy5CxvNnL2_VzQ&usqp=CAU"
+        ],
+        "price": 10000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    }, {
+        "id": 21,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "kanaci",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwKn0U5oTi_kFeXI_5wke7Fy5CxvNnL2_VzQ&usqp=CAU"
+        ],
+        "price": 10000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    }, {
+        "id": 22,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "kanaci",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwKn0U5oTi_kFeXI_5wke7Fy5CxvNnL2_VzQ&usqp=CAU"
+        ],
+        "price": 10000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    }, {
+        "id": 23,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "kanaci",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwKn0U5oTi_kFeXI_5wke7Fy5CxvNnL2_VzQ&usqp=CAU"
+        ],
+        "price": 10000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "vanadzor"
+        ]
+    }, {
+        "id": 24,
+        "categoryName": "andznakan irer",
+        "subCategoryName": "jamacuycner",
+        "status": "kanaci",
+        "userId": 6,
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwKn0U5oTi_kFeXI_5wke7Fy5CxvNnL2_VzQ&usqp=CAU"
+        ],
+        "price": 10000,
+        "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
+        "title": [
+            "aasjhajshasjhsj"
+        ],
+        "description": [
+            "Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք"
+        ],
+        "region": [
+            "lori",
+            "spitak"
+        ]
+    }
+]

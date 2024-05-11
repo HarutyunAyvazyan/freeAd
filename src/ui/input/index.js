@@ -1,10 +1,11 @@
 import "./style.css"
 
-const Input = ({ label, placeholder, type, onChange, name, value, onBlur,onFocus,style }) => {
+const Input = ({ label, placeholder, type, onChange, name, value, onBlur, onFocus, style,className }) => {
     return (
         <div className="inputDiv">
             <label className="inputTitle">{label}</label>
-            <input className="input"
+            <input
+                className={className}
                 style={style}
                 type={type}
                 name={name}

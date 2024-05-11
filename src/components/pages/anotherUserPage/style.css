@@ -1,0 +1,39 @@
+
+.anotherUserPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    /* background-color: beige; */
+    /* position: relative; */
+}
+.anotherUserPageUser{
+    width:30%;
+    background-color: rgb(255, 255, 255);
+    height:500px;
+    /* position: fixed; */
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 100px;
+    /* padding: 5px; */
+    /* background-color: #cae8ca; */
+    border: 2px solid #b1d0e4;
+    border-radius: 5px;
+
+}
+.anotherUserPageAnnouncement{
+    width:68%;
+    display: flex;
+    flex-direction: column;
+    gap:2px 0;
+    background-color: white;
+    padding-top:20px
+/* position: absolute;
+right:0 */
+}
+
+.anotherUserPageIcon{
+    font-size: 34px;
+    color:green;
+    cursor: pointer;
+}

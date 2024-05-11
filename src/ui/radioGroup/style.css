@@ -1,0 +1,83 @@
+.radioGroup {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+  }
+  
+  .radioGroupLabel{
+    margin:0;
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(77, 76, 76)
+  }
+  /* Hide the browser's default radio button */
+  .radioGroup input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmarkRadio {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid rgb(18, 131, 245);
+ }
+  
+  /* On mouse-over, add a grey background color */
+  .radioGroup:hover input ~ .checkmarkRadio {
+    background-color: rgb(217, 219, 222);
+    transition: linear 0.1s;  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radioGroup input:checked ~ .checkmarkRadio {
+    background-color: #2196F3;
+    transition: linear 0.2s;
+    border:1px solid rgb(160, 217, 246)
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmarkRadio:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radioGroup input:checked ~ .checkmarkRadio:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radioGroup .checkmarkRadio:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  .radioGroupDescription{
+    
+        font-size: 16px;
+        margin: 0;
+        text-align: left;
+        color: grey;
+        padding:10px 0
+  }

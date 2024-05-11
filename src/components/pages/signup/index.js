@@ -5,6 +5,8 @@ import Logo from "../../layout/header/headerWeb/headerSearch/logo"
 import { useState } from "react"
 import { Formik, Form, ErrorMessage } from "formik"
 import * as Yup from "yup"
+import TextErrors from "../../formsCategories/textErrors"
+import pageName from "../../../constants/pageName"
 
 
 
@@ -30,7 +32,7 @@ const Signup = () => {
     })
 
     const onSubmit = (values) => {
-        console.log("Form data", values)
+        // console.log("Form data", values)
     }
     return (
 
@@ -52,54 +54,59 @@ const Signup = () => {
                                 </div>
                                 <div className="inputsDiv">
                                     <Input
+                                        className={formik.touched.userName && formik.errors.userName ? "errors " : "input"}
                                         label={"Username"}
                                         placeholder={"Username"}
                                         type={"text"}
-                                        name={"Username"}
+                                        name={"userName"}
                                         {...formik.getFieldProps("userName")}
                                     />
-                                    <ErrorMessage name="userName" />
+                                    <ErrorMessage component={TextErrors} name="userName" />
                                     <Input
+                                        className={formik.touched.telephone && formik.errors.telephone ? "errors " : "input"}
                                         label={"Telephone"}
                                         placeholder={"Telephone"}
                                         type={"text"}
                                         name={"telephone"}
                                         {...formik.getFieldProps("telephone")}
                                     />
-                                    <ErrorMessage name="telephone" />
+                                    <ErrorMessage component={TextErrors} name="telephone" />
                                     <Input
+                                        className={formik.touched.email && formik.errors.email ? "errors " : "input"}
                                         label={"Email "}
                                         placeholder={"Email"}
                                         type={"text"}
                                         name={"email"}
                                         {...formik.getFieldProps("email")}
                                     />
-                                    <ErrorMessage name="email" />
+                                    <ErrorMessage component={TextErrors} name="email" />
                                     <Input
+                                        className={formik.touched.password && formik.errors.password ? "errors " : "input"}
                                         label={"Password"}
                                         placeholder={"*********"}
                                         type={"password"}
-                                        name={"Password"}
+                                        name={"password"}
                                         {...formik.getFieldProps("password")}
                                     />
-                                    <ErrorMessage name="password" />
+                                    <ErrorMessage component={TextErrors} name="password" />
                                     <Input
+                                        className={formik.touched.confirmPassword && formik.errors.confirmPassword ? "errors " : "input"}
                                         label={"Confirm Password"}
                                         placeholder={"*********"}
                                         type={"password"}
-                                        name={"password"}
+                                        name={"confirmPassword"}
                                         {...formik.getFieldProps("confirmPassword")}
                                     />
-                                    <ErrorMessage name="confirmPassword" />
+                                    <ErrorMessage component={TextErrors} name="confirmPassword" />
 
 
                                     <button className="signInBtnDiv" type="submit">
-                                        sign in
+                                        Sign Up
                                     </button>
                                 </div>
                             </div>
                             <div className="signInFooter">
-                                <p className="signInFooterText">New to Sayti anun? <Link to="/signin" className="signInFooterLink">Sign in</Link> .</p>
+                                <p className="signInFooterText">New to Sayti anun? <Link to={pageName.signIn} className="signInFooterLink">Sign in</Link> .</p>
                             </div>
                         </div >
                     </Form>

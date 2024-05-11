@@ -1,8 +1,8 @@
-const SettingsUserPage = () => {
+const ProfileSettings = () => {
     return (
         <div style={{marginTop:"200px"}}>
-            announcement userpage
+            Settings userpage
         </div>
     )
 }
-export default SettingsUserPage
+export default ProfileSettings

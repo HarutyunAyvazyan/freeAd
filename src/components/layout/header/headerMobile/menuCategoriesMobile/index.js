@@ -50,7 +50,7 @@ const MenuCategoryMobile = ({ toogleModalMobile }) => {
                             // opacity: "0.3"
 
                         }}>
-                                        <span className="categoryButtonTextMobile">{category.name}</span>
+                                        <span className="categoryButtonTextMobile" style={{color:"white"}}>{category.name}</span>
 
                         </div>
 

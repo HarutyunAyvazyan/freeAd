@@ -27,8 +27,8 @@
     flex-direction: row;
     height: 600px;
     margin: 0 auto;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 z-index: 15;
 }
 
@@ -49,7 +49,7 @@ z-index: 15;
     overflow: hidden;
     margin: 0 20px;
     display: flex;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     flex-direction: column;
 
 }
@@ -68,6 +68,7 @@ z-index: 15;
     text-decoration: none;
     list-style-type: none;
     display: inline;
+    font-size: 15px;
 }
 
 .subCategoryLi:hover {
@@ -92,14 +93,14 @@ h2 {
 
 .tabItems {
     width: 100%;
-    display: flex;
+    display: wrap;
     flex-direction: row;
     /* justify-content: space-around; */
     flex-wrap: wrap;
-    display: none;
+    /* display: none; */
     text-align: left;
     overflow: auto;
-    height:90%
+    /* height:90% */
 
 }
 
@@ -126,7 +127,9 @@ h2 {
 
 .categoryButtonText {
     text-align: left;
-    color:black
+    color:black;
+    font-size:16px
+
 
 }
 
@@ -135,6 +138,15 @@ h2 {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 
+}
+.categoryButton:hover .categoryButtonText{
+    color:white;
+    
+    /* line-height: 2; */
+
+}
+.categoryButton:hover .categoryButtonArrow{
+    color:white
 }
 
 
@@ -151,5 +163,5 @@ h2 {
         height:600px
     }
     .buttonsDiv {
-        width: 35%;}
+        width: 40%;}
 }
