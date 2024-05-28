@@ -1,21 +1,20 @@
 .card {
-    width: 240px;
+    width: 19.3%;
     background-color: white;
-    height: 340px;
+    height: auto;
     /* border-radius: 4px; */
     overflow: hidden;
     text-align: left;
-    position: relative;
-    border: 1px solid rgb(222, 222, 222)
+    /* position: relative; */
+    border: 1px solid rgba(48, 47, 47, .1);
+    border-radius: 4px;
+    box-shadow: 0px 2px 0px 0px rgba(48, 47, 47, .1);
 }
 
-.card:hover .cardImage {
-    transform: scale(1.1);
-    overflow: hidden;
-    transition: linear 0.2s;
+.card:hover{
+    box-shadow: 0px 0px 12px 3px  rgb(18, 131, 245,.2);
+    transition:box-shadow 0.6s
 }
-
-.card:hover {}
 
 .cardLink {
     text-decoration: none;
@@ -23,23 +22,22 @@
 }
 
 .cardContainer {
-    width: 95%;
-    margin: 0 auto;
-    padding: 2.5% 0;
-    height: 96%;
+    width: 100%;
+    /* margin: 0 auto; */
+    /* padding: 1% 0; */
+    height: 94%;
 }
 
 .cardImageDiv {
-    width: 100%-2px;
-    height: 55%;
+    height: 220px;
     overflow: hidden;
     position: relative;
-    border: 1px solid rgb(222, 222, 222)
+    /* border: 1px solid rgb(222, 222, 222) */
 }
 
 .cardImage {
-    width: 100%;
-    height: 100%;
+width: 100%;
+  height: 100%;
 
 }
 
@@ -52,27 +50,26 @@
 }
 
 
+.cardDescription{
+    padding: 5px;
+    position: relative;
+    height: auto;
 
+}
 
 .cardPrice {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
+    font-family: 'Jaldi', sans-serif;
+
 }
 
-.cardTitle {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
-    width: 94%;
-    /* overflow: hidden; */
-    margin: 0;
-}
+
 
 
 
@@ -116,19 +113,11 @@
     font-size: 11px;
 }
 
-.cardStatus {
-    background: #aaa9a9;
-    color: #fff;
-    font-size: 11px;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 3px 10px;
 
-}
 
 .cardFavoriteIcon {
     font-size: 18px;
-    color: rgb(92, 169, 245);
+    color: black;
 
 }
 
@@ -139,14 +128,14 @@
 }
 
 .cardFavoriteIconDiv {
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     position: absolute;
     z-index: 3;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255, .9);
+    background-color: transparent;
     /* opacity: 0.8; */
     display: flex;
     justify-content: center;
@@ -161,7 +150,14 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     margin: 5px 0;
-    color:grey
+    color: #000;
+    font-size: 15px;
+    width: 80%;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Jaldi', sans-serif;
+    line-height: 1.1;
+
 }
 
 /* .cardTitleItems{
@@ -170,7 +166,6 @@
     align-items: center;
 } */
 .cardTitleItem {
-
     margin: 0
 }
 
@@ -214,25 +209,24 @@
     align-items: center;
     text-align: left;
     gap: 0 2px;
-    width: 100%;
+    width: 96%;
     overflow: hidden;
-    padding: 1px 0;
-    border-bottom: 1px solid rgb(228, 225, 225);
     display: -webkit-flex;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
-    text-transform: uppercase;
-    font-size: 11px;
-    color: grey
+    font-size: 12px;
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+
 }
 
 .cardRegionItem {
     margin: 0;
     color: rgb(34, 32, 32);
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .cardDescriptionItem {
@@ -243,8 +237,8 @@
     -webkit-line-clamp: 2;
     margin: 0;
     text-decoration: none;
-    color:rgb(12, 5, 5)
-
+    color: rgb(110, 110, 110);
+    font-size: 12px;
 }
 
 .cardDescriptionItems {
@@ -255,102 +249,64 @@
     width: 85%;
     padding: 0;
     text-decoration: none;
-}
-
-.imageBoxContainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-}
-
-.imageBoxContainer:hover .imageHoverContainer {
-    display: block;
-}
-
-.imageBoxContainerImage {
-    width: 100%;
-    height: 100%;
-}
-
-.imageHoverContainer {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-}
-
-.imageHoverContainer:hover {
-    display: flex;
-}
-
-.imageHoverButtonDiv {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 3;
-
-}
-
-.imageHoverButton {
-    width: 92%;
-    height: 3px;
-    position: absolute;
-    bottom: 5px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(255, 255, 255, .7);
-}
-
-.activeButton {
-    width: 92%;
-    height: 3px;
-    position: absolute;
-    bottom: 5px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(18, 131, 245);
-}
-
-.imageBoxCountIcon {
-    color: white;
-    font-size: 70px;
-}
-
-.imageBoxCountDiv {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(24, 25, 27, 0.6);
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.imageBoxCountText {
-    color: white;
-    font-size: 16px;
+    margin-bottom: 5px;
+    
 }
 
 
-@media(max-width:580px) {
+
+@media(max-width:1280px) {
+
+    .card {
+        width: 24%;
+        /* height: 320px */
+    }
+
+    /* .cardImageDiv {
+        height: 64%;
+    } */
+
+}
+
+@media(max-width:1024px) {
+
+    .card {
+        width: 24%;
+        /* height: 330px */
+    }
+    .cardImageDiv {
+        height: 180px;
+    
+        /* border: 1px solid rgb(222, 222, 222) */
+    }
+
+
+}
+
+@media(max-width:768px) {
+
+    .card {
+        width: 32.7%;
+        /* height: 330px */
+    }
+    .cardImageDiv {
+        height: 200px;
+    
+        /* border: 1px solid rgb(222, 222, 222) */
+    }
+
+}
+
+@media(max-width:550px) {
 
     .card {
         width: 49%;
-        height: 280px
+        /* height: 330px */
     }
-
     .cardImageDiv {
-        height: 50%;
+        height: 200px;
+    
+        /* border: 1px solid rgb(222, 222, 222) */
     }
 
 }

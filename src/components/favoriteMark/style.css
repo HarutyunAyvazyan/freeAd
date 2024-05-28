@@ -1,0 +1,128 @@
+.containerFavoriteChaeckbox {
+    width: 400px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 90px;
+    right: 0;
+    box-shadow: 0px 2px 0px 0px rgb(67, 177, 250, .3);
+    background-color: rgb(234, 246, 252);
+    padding:10px;
+    border-radius: 4px;
+
+}
+
+.FavoriteMarkConuntProductCheckbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px
+}
+
+.favoriteMarkChooseAll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding:10px;
+    border-radius: 4px;
+}
+
+.favoriteMarktChoose {
+    cursor: pointer;
+}
+
+.favoriteMarkIconMark {
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.favoriteMarkChekBoxChhoseDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 0px 4px 1px rgb(67, 177, 250,.3); */
+    border-radius: 2px;
+    /* background-color: white; */
+
+}
+
+.favoriteMarkChekBoxChhoseIcon {
+    color: rgb(67, 177, 250);
+    font-size: 24px;
+}
+
+.favoriteMarkIcons {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.favoriteMarkShareDiv {
+    width: 36px;
+    height: 24px;
+    background-color: rgb(67, 177, 250);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.favoriteMarkShareIcon {
+    color: white
+}
+
+.favoriteMarkDeleteDiv {
+    width: 36px;
+    height: 24px;
+    background-color: rgb(67, 177, 250);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.favoriteMarkDeleteIcon {
+    color: white
+}
+
+.FavoriteMarkConuntProductCheckboxText{
+    margin:0;
+    color:black;
+    font-family: 'Jaldi', sans-serif;
+}
+
+.favoriteMarktChoose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:1024px){
+    .containerFavoriteChaeckbox {
+        width: 400px;
+        margin-bottom: 20px;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        box-shadow: 0px 3px 0px 0px rgba(96, 98, 99, 0.1);
+        background-color: rgb(234, 246, 252);
+        padding:10px
+    
+    }
+}
+
+@media(max-width:768px){
+    .containerFavoriteChaeckbox{
+        width:100%;
+        position: static;
+        padding:5px 0;
+        margin-bottom:5px;
+        border:none
+    }
+
+}

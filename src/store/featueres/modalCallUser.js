@@ -2,21 +2,27 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const modalCallUser = createSlice({
-    name:"modalCall",
-    initialState:{
-        isOpenCall:false,
-        isOpenMessage:false
+  name: "modalCall",
+  initialState: {
+    isOpenCall: false,
+    isOpenMessage: false
+  },
+  reducers: {
+    toggleModalCallClose: state => {
+      state.isOpenCall = false;
     },
-    reducers: {
-        toggleModalCall: state => {
-          state.isOpenCall = !state.isOpenCall;
-        },
-        toggleModalMessage: state => {
-          state.isOpenMessage = !state.isOpenMessage;
-        }
-      }
+    toggleModalCallOpen: state => {
+      state.isOpenCall = true;
+    },
+    toggleModalMessageOpen: state => {
+      state.isOpenMessage = true;
+    },
+    toggleModalMessageClose: state => {
+      state.isOpenMessage = false;
+    }
+  }
 })
 
 
-export const { toggleModalCall, toggleModalMessage } = modalCallUser.actions;
+export const { toggleModalCallClose, toggleModalCallOpen, toggleModalMessageOpen, toggleModalMessageClose } = modalCallUser.actions;
 export default modalCallUser.reducer;

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { CiHeart } from "react-icons/ci";
+
 import { IoHeart } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 // import "./style.css"
@@ -42,7 +44,7 @@ const FavoriteIcon = ({item,storageName,dispatchFunc,classNameDiv,classNameIcon,
 
 return (
     <div className={classNameDiv}>
-    <IoHeart className={isFavorite ? classNameIconActive : classNameIcon} onClick={(e) => handleClickLike(e,item.id)} />
+    <CiHeart className={isFavorite ? classNameIconActive : classNameIcon} onClick={(e) => handleClickLike(e,item.id)} />
 
     </div>
 )

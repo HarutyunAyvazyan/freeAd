@@ -5,6 +5,7 @@ import { RiCheckboxMultipleLine } from "react-icons/ri"
 import { loadFavoriteUserLengthFromLocalStorage } from "../../../../store/featueres/favoriteState"
 import { useDispatch } from "react-redux"
 import CardUserFavorite from "../../../cards/cardUserFavorite"
+import FavoriteMark from "../../../favoriteMark"
 
 
 const FavoriteUsers = () => {
@@ -64,57 +65,23 @@ const FavoriteUsers = () => {
         setBasketChekBoxChoose(!basketChekBoxChoose)
     }
 
-console.log(productsWithChecked)
+    console.log(productsWithChecked)
 
     return (
-        // <div className="container">
-            <div className="basket" >
-                <div className="basketContent">
+            <div className="favoriteUsers" >
+                <div className="favoriteUsersContent">
                     {!productsWithChecked.length ?
                         <h3 >duq chuneq naxntrac haytararutyunner</h3> :
                         <div className="containerBasketChaeckbox">
-                            <div className="basketConuntProductCheckbox" >
-                                <span>{basketChekBoxChoose ? `@ntrvacner:${productsWithChecked.filter((item) => item.isChecked).length}` : "ogtaterer"}</span>
-                                <span className="basketConuntProduct">qanak {productsWithChecked.length}</span>
-                                <RiCheckboxMultipleLine style={productsWithChecked.length > 1
-                                    ?
-                                    { display: "block" }
-                                    :
-                                    { display: "none" }
-                                }
-                                    className="basketChekBoxChhose"
-                                    onClick={handleBasketChekBoxChoose} />
-                            </div>
-                            <div style={basketChekBoxChoose && productsWithChecked.length > 1
-                                ?
-                                { display: "flex" }
-                                :
-                                { display: "none" }
-                            }
-                                className="basketChooseAll">
-                                <label className="basketChoose">
-                                    <span>@ntrel bolor@</span>
-                                    <input 
-                                        type="checkbox"
-                                        checked={productsIsChecked ? (true) : (false)}
-                                        onChange={handleCheckAll}
-                                    />
-                                    {/* <label className="containerInput" >
-                                        <p className="checkBoxLabel">{"@ntrel bolor@"}</p>
-                                        <input
-                                             type="checkbox"
-                                             checked={productsIsChecked ? (true) : (false)}
-                                             onChange={handleCheckAll}
-                                        />
-                                        <span class="checkmark"></span>
-
-                                    </label> */}
-                                </label>
-                                <div className="basketIcons" >
-                                    <BsShare />
-                                    <BsTrash3 onClick={handleDeleteAll} />
-                                </div>
-                            </div>
+                            <FavoriteMark
+                                favoriteCheckBoxChoose={basketChekBoxChoose}
+                                arrayWithChecked={productsWithChecked}
+                                handleClickFavoriteCheckBoxChoose={handleBasketChekBoxChoose}
+                                itemIsChecked={productsIsChecked}
+                                handleCheckAll={handleCheckAll}
+                                handleDeleteAll={handleDeleteAll}
+                                favoriteMarkText="ogtaterer"
+                            />
                             {
                                 productsWithChecked.map((user) =>
                                     <CardUserFavorite

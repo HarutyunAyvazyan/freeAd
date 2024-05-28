@@ -1,73 +1,73 @@
-import { Link, useParams } from "react-router-dom";
+import { useState } from 'react';
 
+import { useParams } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, EffectCube } from 'swiper/modules'
+import { Navigation, Pagination, EffectCube } from 'swiper/modules';
 
-import { BsShare } from "react-icons/bs";
-import { SlBasket } from "react-icons/sl";
-import { CgHeart } from "react-icons/cg";
+import CardUser from "../../cards/cardUser";
 
 import { getUsers } from "../../../utils";
 import { getProducts } from "../../../utils";
 
-import house from '../../../assets/images/imageButtonsCategories/realEstate.png'
-import car from '../../../assets/images/imageButtonsCategories/auto.jpg'
-import clothes from '../../../assets/images/imageButtonsCategories/clothes.jpg'
-import animals from '../../../assets/images/imageButtonsCategories/animals.jpg'
-import garden from '../../../assets/images/imageButtonsCategories/sad.png'
-import sport from '../../../assets/images/imageButtonsCategories/sport.jpg'
-import working from '../../../assets/images/imageButtonsCategories/job.jpg'
-import electronicDevices from '../../../assets/images/imageButtonsCategories/electroniks.jpg'
-import child from '../../../assets/images/imageButtonsCategories/child.jpg'
+import { BsShare } from "react-icons/bs";
+import { SlBasket } from "react-icons/sl";
+import { CgHeart } from "react-icons/cg";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-cube';
 
-import "./style.css"
-import { useState } from 'react';
-import ModalWindowCall from './modalWindowCall';
-import ModalWindowMessage from './modalWindowMessage';
-import CardUser from "../../cards/cardUser";
+import "./style.css";
+import { toggleModalCallOpen } from '../../../store/featueres/modalCallUser';
+import Fancybox from '../../fancybox';
 
-
+const options = {
+    compact: false,
+    hideScrollbar: false,
+    Toolbar: {
+        display: {
+            left: [
+                "infobar",
+            ],
+            middle: [],
+            right: [
+                "close",
+                "fullScreen"
+            ],
+        }
+    },
+    Images: {
+        zoom: false,
+    },
+};
 
 const SinglePage = () => {
-    const { productId } = useParams()
+    const { productId } = useParams();
+    const [isOpenCall, setIsOpenCall] = useState(false);
+    const [isOpenMessage, setIsOpenMessage] = useState(false);
+
+    const products = getProducts().filter((product) => product.id == productId);
+    const product = products[0];
+    const { data } = product;
+
+    const users = getUsers().filter((user) => user.id === product.userId);
+    const user = users[0];
+
+    const toogleModalCall = () => toggleModalCallOpen();
+    const toogleModalMessage = () => setIsOpenMessage(!isOpenMessage);
 
 
-    // console.log(id,"productId")
-    // const [zoom,setZoom] = useState(false)
-    const products = getProducts().filter((product) => `${product.id}` === productId)
-    const product = products[0]
-    // console.log(product, "product")
-
-    const users = getUsers().filter((user) => user.id === product.userId)
-    const user = users[0]
-
-    const [isOpenCall, setIsOpenCall] = useState(false)
-    const [isOpenMessage, setIsOpenMessage] = useState(false)
-    const toogleModalCall = () => {
-        setIsOpenCall(!isOpenCall)
-    }
-    const toogleModalMessage = () => {
-        setIsOpenMessage(!isOpenMessage)
-    }
-// const handleZoom = () => {
-//     setZoom(!zoom)
-// }
-    const data = product.data
     return (
         <div className='container'>
             <div className='singlePage'>
                 <div className='singlePageAnnouncement'>
-                <div className='singlePageAnnouncementIcons'>
-                            <BsShare />
-                            <CgHeart />
-                            <SlBasket />
-                        </div>
+                    <div className='singlePageAnnouncementIcons'>
+                        <BsShare />
+                        <CgHeart />
+                        <SlBasket />
+                    </div>
                     <div className='singlePageAnnouncementImages'>
                         <Swiper
                             effect={'cube'}
@@ -86,23 +86,23 @@ const SinglePage = () => {
                             className="swiperSinglePage"
                         >
                             {product.images.length &&
-                                product.images.map((image) => (
-                                    <SwiperSlide>
-                                        <img src={image} className='singlePageAnnouncementImage' />
+                                product.images.map((image, index) => (
+                                    <SwiperSlide key={index}>
+                                        <Fancybox options={options}>
+                                            <img src={image} className='singlePageAnnouncementImage' data-fancybox="gallery" />
+                                        </Fancybox>
                                     </SwiperSlide>
                                 ))
                             }
                         </Swiper>
-
                     </div>
                     <div className='singlePageAnnouncementDescription'>
-                    <div style={{display:"flex",margin:"0"}}>{product.title?.map((titleItem) => <h1>{titleItem}</h1>)}</div>
-
+                        <div style={{ display: "flex", margin: "0" }}>
+                            {product.title?.map((titleItem) => <h1>{titleItem}</h1>)}
+                        </div>
                         <div>
                             {data && Object.keys(data)?.map(key => (
-
                                 <div key={key} >
-                                    {/* {console.log(key,"key")} */}
                                     <h2 className="descriptionTitleGroup">{key}</h2>
                                     <div>
                                         {Object.entries(data[key])?.map(([label, value]) => (
@@ -118,33 +118,18 @@ const SinglePage = () => {
                             <p style={{ textAlign: "left" }}>
                                 {product.nkaragir}
                             </p>
-
                         </div>
                     </div>
-
                 </div>
-                {/* <div className='singlePageUser'> */}
-                <CardUser user={user} isOpenCall={isOpenCall} isOpenMessage={isOpenMessage} toogleModalCall={toogleModalCall} toogleModalMessage={toogleModalMessage}/>
-                {/* </div> */}
-                {/* <div className='singlePageUser'>
-                    <Link to={`/user/${user.id}`}>
-                        <h1>{user.firstName}</h1>
-                    </Link>
-                    <button className='singlePageUserTelephone' onClick={toogleModalCall}>
-                        CALL
-                    </button>
-                    <ModalWindowCall user={user} isOpenCall={isOpenCall} toogleModalCall={toogleModalCall} />
-                    <button className='singlePageUserMessage' onClick={toogleModalMessage}>
-                        SMS
-                    </button >
-                    <ModalWindowMessage user={user} isOpenMessage={isOpenMessage} toogleModalMessage={toogleModalMessage} />
-                    <h3 className='singlePageUsersCommentsTitle'>Comments</h3>
-                    <div className='singlePageUsersCommentsInput'></div>
-                </div> */}
+                <CardUser
+                    user={user}
+                // isOpenCall={isOpenCall}
+                // isOpenMessage={isOpenMessage}
+                // toogleModalMessage={toogleModalMessage}
+                />
             </div>
         </div>
-
     )
-}
+};
 
-export default SinglePage
+export default SinglePage;

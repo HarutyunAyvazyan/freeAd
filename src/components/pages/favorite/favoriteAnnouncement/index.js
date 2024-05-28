@@ -1,11 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { RiCheckboxMultipleLine } from "react-icons/ri";
-// import { BsTrash3 } from "react-icons/bs";
-// import { BsShare } from "react-icons/bs";
-// import { getProducts } from "../../../utils"
-// import CardBasket from "../../cards/cardBasket";
-// import CardHorizontal from "../../cards/cardHorizontal"
-// import "./style.css"
 
 import { useState } from "react"
 import { useDispatch } from "react-redux"
@@ -14,14 +6,10 @@ import { loadFavoriteAdLengthFromLocalStorage } from "../../../../store/featuere
 import { RiCheckboxMultipleLine } from "react-icons/ri"
 import { BsShare, BsTrash3 } from "react-icons/bs"
 import CardBasket from "../../../cards/cardBasket"
+import CardAdFavorite from "../../../cards/cardAdFavorite"
+import FavoriteMark from "../../../favoriteMark"
 
 
-
-
-// import { Link } from "react-router-dom";
-// import "./style.css"
-// import { useDispatch } from "react-redux";
-// import { loadFavoriteLengthFromLocalStorage } from "../../../store/featueres/favoriteState";
 
 
 
@@ -85,75 +73,36 @@ const FavoriteAnnouncement = () => {
 
 
     return (
-        // <div className="container">
-            <div className="basket" >
-                <div className="basketContent">
-                    {!productsWithChecked.length ?
-                        <h3 >duq chuneq naxntrac haytararutyunner</h3> :
-                        <div className="containerBasketChaeckbox">
-                            <div style={{backgroundColor:"green"}}>
-                            <div className="basketConuntProductCheckbox" >
-                                <span>{basketChekBoxChoose ? `@ntrvacner:${productsWithChecked.filter((item) => item.isChecked).length}` : "haytararutyunner"}</span>
-                                <span className="basketConuntProduct">qanak {productsWithChecked.length}</span>
-                                <RiCheckboxMultipleLine style={productsWithChecked.length > 1
-                                    ?
-                                    { display: "block" }
-                                    :
-                                    { display: "none" }
-                                }
-                                    className="basketChekBoxChhose"
-                                    onClick={handleBasketChekBoxChoose} />
-                            </div>
-                            <div style={basketChekBoxChoose && productsWithChecked.length > 1
-                                ?
-                                { display: "flex" }
-                                :
-                                { display: "none" }
-                            }
-                                className="basketChooseAll">
-                                <label className="basketChoose">
-                                    <span>@ntrel bolor@</span>
-                                    <input 
-                                        type="checkbox"
-                                        checked={productsIsChecked ? (true) : (false)}
-                                        onChange={handleCheckAll}
-                                    />
-                                    {/* <label className="containerInput" >
-                                        <p className="checkBoxLabel">{"@ntrel bolor@"}</p>
-                                        <input
-                                             type="checkbox"
-                                             checked={productsIsChecked ? (true) : (false)}
-                                             onChange={handleCheckAll}
-                                        />
-                                        <span class="checkmark"></span>
-
-                                    </label> */}
-                                </label>
-                                <div className="basketIcons" >
-                                    <BsShare />
-                                    <BsTrash3 onClick={handleDeleteAll} />
-                                </div>
-                            </div>
-                            </div>
-                            
-                            {
-                                productsWithChecked.map((product) =>
-                                    <CardBasket
-                                        product={product}
-                                        basketChekBoxChoose={basketChekBoxChoose}
-                                        key={product.id}
-                                        handleDeleteItem={handleDeleteItem}
-                                        favorites={favorites}
-                                        handleCheck={handleCheck}
-                                    />
-                                )
-                            }
-                        </div>
-                    }
-                </div>
+        <div className="favoriteAd" >
+            <div className="favoriteAdContent">
+                {!productsWithChecked.length ?
+                    <h3 >duq chuneq naxntrac haytararutyunner</h3> :
+                    <div className="containerBasketChaeckbox">
+                        <FavoriteMark 
+                          favoriteCheckBoxChoose={basketChekBoxChoose}
+                          arrayWithChecked={productsWithChecked}
+                          handleClickFavoriteCheckBoxChoose={handleBasketChekBoxChoose}
+                          itemIsChecked={productsIsChecked}
+                          handleCheckAll={handleCheckAll}
+                          handleDeleteAll={handleDeleteAll}
+                          favoriteMarkText={productsWithChecked.length >1 ? "Haytararutyunneri qanak" : "Haytararutyunner"}
+                        />
+                        {
+                            productsWithChecked.map((product) =>
+                                <CardAdFavorite
+                                    product={product}
+                                    basketChekBoxChoose={basketChekBoxChoose}
+                                    key={product.id}
+                                    handleDeleteItem={handleDeleteItem}
+                                    favorites={favorites}
+                                    handleCheck={handleCheck}
+                                />
+                            )
+                        }
+                    </div>
+                }
             </div>
-        // </div >
-       
+        </div>
     )
 }
 

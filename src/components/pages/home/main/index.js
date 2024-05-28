@@ -36,9 +36,12 @@ const Main = () => {
 
     return (
             <div className="main">
-            {data && data.map((dataItem) =>(
+                <h1 className="mainTitle">Recommendations</h1>
+                <div className="mainCards">
+                {data && data.map((dataItem) =>( 
                 <Card product ={dataItem} key={dataItem.id} />
             ))}
+                </div>
             </div>
 
     )

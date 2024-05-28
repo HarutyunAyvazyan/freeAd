@@ -5,7 +5,7 @@ flex-direction: column;
 position: fixed; 
 top:0;
 background-color:rgb(39, 39, 108);
-z-index: 10;
+z-index: 3;
 }
 /* 99,17,181 */
 .headerLinksDiv{
@@ -80,4 +80,10 @@ z-index: 10;
     box-shadow: 1px 1px 10px  10px rgb(232, 236, 233);
     background-color:rgb(232, 236, 233) ;
     transition:linear .2s;
+}
+
+@media(max-width:1024px){
+    .layout{
+display:none
+    }
 }

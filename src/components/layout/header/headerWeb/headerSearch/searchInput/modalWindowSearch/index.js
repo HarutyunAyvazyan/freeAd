@@ -4,10 +4,11 @@ import SearchResults from "../searchResults"
 import "./style.css"
 
 
-const ModalWindowSearch = ({openModal}) => {
-// console.log(openModal,"oppppppp")
+const ModalWindowSearch = ({ openModal }) => {
+    const style = { display: openModal ? 'block' : 'none' };
+    // console.log(openModal,"oppppppp")
     return (
-        <div className="modalWindowSearch" style={openModal ? {display:"block"}:{display:"none"}}>
+        <div className="modalWindowSearch" style={style}>
         </div>
     )
 }

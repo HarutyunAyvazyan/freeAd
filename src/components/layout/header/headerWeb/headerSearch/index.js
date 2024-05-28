@@ -12,15 +12,14 @@ import { useEffect, useState } from "react";
 import pageName from "../../../../../constants/pageName";
 import { useDispatch, useSelector } from "react-redux";
 import { loadFavoriteAdLengthFromLocalStorage, loadFavoriteUserLengthFromLocalStorage } from "../../../../../store/featueres/favoriteState";
-import FavoriteIcon from "./favorite";
+import FavoriteIconNavBar from "../../../../favoriteIconNavBar";
 
 
 
 const HeaderSearch = () => {
     const favoriteLength = useSelector(state => state.favorite.favoriteAdLength);
     const favoriteUserLenght =  useSelector(state => state.favorite.favoriteUserLength)
-    console.log(favoriteLength,"aaa")
-    console.log(favoriteUserLenght,"sss")
+   
     const totalLength = favoriteLength + favoriteUserLenght
     const dispatch = useDispatch()
 
@@ -53,7 +52,14 @@ const HeaderSearch = () => {
                             <SlBasket />
                             <span className="basketCount" style={totalLength === 0 ? { display: "none" } : { display: "block" }}>{totalLength}</span>
                         </div> */}
-                        <FavoriteIcon totalLength={totalLength}/>
+                        <FavoriteIconNavBar 
+                        totalLength={totalLength}
+                        classNameFavoriteMainDiv="favoriteIconDiv"
+                        classNameFavoriteIcon="favoriteIcon"
+                        classNameFavoriteIconActive="favoriteIconActive"
+                        classNameFavoriteCountDiv="favoriteCountDiv"
+                        classNameFavoriteCountText="favoriteCountText"
+                        />
                         {/* style={{width:"10%"}}> */}
 
                     </Link>

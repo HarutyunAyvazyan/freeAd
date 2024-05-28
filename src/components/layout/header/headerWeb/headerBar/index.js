@@ -8,7 +8,7 @@ import { useState } from "react";
 
 
 
-const HeaderBar = ({ countBasket }) => {
+const HeaderBar = () => {
     
 
     const isLoggedIn = localStorage.getItem("user")
@@ -31,8 +31,8 @@ const HeaderBar = ({ countBasket }) => {
 
     // }
     return (
-        <header className="layout">
-            <div className="headerLinksDiv">
+        <header className="layout" >
+            <div className="headerLinksDiv" >
                 <div className="container">
                     <div className="headerLinks">
                         <div className="navbarLinks">
@@ -67,7 +67,7 @@ const HeaderBar = ({ countBasket }) => {
 
             </div>
             {/* <div className="headerSearchDiv"> */}
-            <HeaderSearch countBasket={countBasket} />
+            <HeaderSearch  />
             {/* </div> */}
 
         </header>

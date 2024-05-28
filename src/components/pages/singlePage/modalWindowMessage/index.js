@@ -1,31 +1,31 @@
-
-
+import { useRef } from "react";
 
 import { SlClose } from "react-icons/sl";
 
-import "./style.css"
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { toggleModalMessageClose } from "../../../../store/featueres/modalCallUser";
 
-const ModalWindowMessage = ({ user ,isOpenMessage,handleToggleModalMessage}) => {
-    const [enter,setEnter] = useState(false)
-    const handleMouseLeave = () => {
-        setEnter(!enter)
-        console.log(enter,"sss")
-    }
 
-    const handleMouseEnter =() => {
-        setEnter(!enter)
-        console.log(enter,"aaa")
-    }
-    return (
-        <div className="modalWindowMessage" style={isOpenMessage ? {display:"flex"}:{display:"none"}} onClick={!enter?handleToggleModalMessage:null }>
-            <div className="modalWindowMessageContent" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+import "./style.css";
+import useHandleClickOutside from "../../../../hooks/useHandleClickOutside";
+
+
+const ModalWindowMessage = ({ user, isOpenMessage }) => {
+    const dispatch = useDispatch();
+    const modalRef = useRef(null);
+
+    const handleClose = () => dispatch(toggleModalMessageClose());
+    useHandleClickOutside(modalRef, () => handleClose());
+
+    return isOpenMessage && (
+        <div className="modalWindowMessage">
+            <div ref={modalRef} className="modalWindowMessageContent">
                 <h2>{user.firstName}</h2>
-                <textarea className="modalWindowMessageInput"/>
-                <SlClose className="modalWindowMessageClose" onClick={handleToggleModalMessage}/>
+                <textarea className="modalWindowMessageInput" />
+                <SlClose className="modalWindowMessageClose" onClick={handleClose} />
             </div>
         </div>
     )
-}
+};
 
-export default ModalWindowMessage
+export default ModalWindowMessage;

@@ -1,0 +1,86 @@
+.imageBoxContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.imageBoxContainer:hover .imageHoverContainer {
+    display: block;
+}
+
+.imageBoxContainerImage {
+    width: 100%; /* Занимаем всю доступную ширину контейнера */
+  height: 100%; /* Автоматически вычисляем высоту для сохранения пропорций */
+  object-fit: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.imageHoverContainer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.imageHoverContainer:hover {
+    display: flex;
+}
+
+.imageHoverButtonDiv {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+
+}
+
+.imageHoverButton {
+    width: 92%;
+    height: 3px;
+    position: absolute;
+    bottom: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255, .7);
+}
+
+.activeButton {
+    width: 92%;
+    height: 3px;
+    position: absolute;
+    bottom: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(18, 131, 245);
+}
+
+.imageBoxCountIcon {
+    color: white;
+    font-size: 50px;
+}
+
+.imageBoxCountDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 25, 27, 0.6);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imageBoxCountText {
+    color: white;
+    font-size: 16px;
+    margin:0
+}

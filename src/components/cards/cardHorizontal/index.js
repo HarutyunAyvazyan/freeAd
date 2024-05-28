@@ -1,60 +1,13 @@
-import { SlBasket } from "react-icons/sl";
-import { IoHeartCircle } from "react-icons/io5";
-
 
 import "./style.css"
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { favoriteLength, loadFavoriteAdLengthFromLocalStorage, setFavoriteItems, setFavoriteLength, toggleFavoriteItem } from "../../../store/featueres/favoriteState";
+
+import {  loadFavoriteAdLengthFromLocalStorage, setFavoriteItems, setFavoriteLength, toggleFavoriteItem } from "../../../store/featueres/favoriteState";
 import pageName from "../../../constants/pageName";
 import FavoriteIcon from "../../favoriteIcon";
 
 const CardHorizontal = ({ product }) => {
-    // const favoriteItems = useSelector(state => state.favorites);
-
-    // const favorit = JSON.parse(localStorage.getItem("favorites")) || [];
-
-
-    // const [isOpen, setIsOpen] = useState(false)
-
-    // const [isFavorite, setIsFavorite] = useState(false);
-
-    // const dispatch = useDispatch()
-
-
-    // useEffect(() => {
-    //     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    //     setIsFavorite(favorites.includes(product.id));
-    // }, [product.id]);
-
-
-    // const toggleFavorite = (id) => {
-    //     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    //     if (favorites.includes(id)) {
-    //         const updatedFavorites = favorites.filter(favId => favId !== id);
-    //         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    //         setIsFavorite(false);
-    //         dispatch(loadFavoriteAdLengthFromLocalStorage());
-
-    //     } else {
-    //         const updatedFavorites = [...favorites, id];
-    //         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    //         setIsFavorite(true);
-    //         dispatch(loadFavoriteAdLengthFromLocalStorage());
-
-    //     }
-    // };
-
-
-    // const handleClickLike = (id) => {
-    //     toggleFavorite(id)
-    // }
-    // const handleClickLikeColor =(id)=>{
-    //     setIsOpen(!isOpen)
-    //     handleClickLike(id)
-    // }
-
+  
     const currentUrl = window.location
     console.log(currentUrl)
     return (

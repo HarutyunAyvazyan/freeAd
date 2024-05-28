@@ -1,0 +1,17 @@
+.imageBoxContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.imageBoxContainer:hover .imageHoverContainer {
+    display: block;
+}
+
+.imageBoxContainerImage {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
