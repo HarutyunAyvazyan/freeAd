@@ -21,7 +21,27 @@ import 'swiper/css/effect-cube';
 
 import "./style.css";
 import { toggleModalCallOpen } from '../../../store/featueres/modalCallUser';
+import Fancybox from '../../fancybox';
 
+const options = {
+    compact: false,
+    hideScrollbar: false,
+    Toolbar: {
+        display: {
+            left: [
+                "infobar",
+            ],
+            middle: [],
+            right: [
+                "close",
+                "fullScreen"
+            ],
+        }
+    },
+    Images: {
+        zoom: false,
+    },
+};
 
 const SinglePage = () => {
     const { productId } = useParams();
@@ -37,6 +57,7 @@ const SinglePage = () => {
 
     const toogleModalCall = () => toggleModalCallOpen();
     const toogleModalMessage = () => setIsOpenMessage(!isOpenMessage);
+
 
     return (
         <div className='container'>
@@ -65,9 +86,11 @@ const SinglePage = () => {
                             className="swiperSinglePage"
                         >
                             {product.images.length &&
-                                product.images.map((image) => (
-                                    <SwiperSlide>
-                                        <img src={image} className='singlePageAnnouncementImage' />
+                                product.images.map((image, index) => (
+                                    <SwiperSlide key={index}>
+                                        <Fancybox options={options}>
+                                            <img src={image} className='singlePageAnnouncementImage' data-fancybox="gallery" />
+                                        </Fancybox>
                                     </SwiperSlide>
                                 ))
                             }
@@ -100,9 +123,9 @@ const SinglePage = () => {
                 </div>
                 <CardUser
                     user={user}
-                    // isOpenCall={isOpenCall}
-                    // isOpenMessage={isOpenMessage}
-                    // toogleModalMessage={toogleModalMessage}
+                // isOpenCall={isOpenCall}
+                // isOpenMessage={isOpenMessage}
+                // toogleModalMessage={toogleModalMessage}
                 />
             </div>
         </div>

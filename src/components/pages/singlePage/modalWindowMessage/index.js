@@ -5,9 +5,9 @@ import { SlClose } from "react-icons/sl";
 import { useDispatch } from "react-redux";
 import { toggleModalMessageClose } from "../../../../store/featueres/modalCallUser";
 
-import useClickOutside from "../../../../hooks/useClickOutside";
 
 import "./style.css";
+import useHandleClickOutside from "../../../../hooks/useHandleClickOutside";
 
 
 const ModalWindowMessage = ({ user, isOpenMessage }) => {
@@ -15,8 +15,7 @@ const ModalWindowMessage = ({ user, isOpenMessage }) => {
     const modalRef = useRef(null);
 
     const handleClose = () => dispatch(toggleModalMessageClose());
-    useClickOutside(modalRef, () => handleClose());
-
+    useHandleClickOutside(modalRef, () => handleClose());
 
     return isOpenMessage && (
         <div className="modalWindowMessage">

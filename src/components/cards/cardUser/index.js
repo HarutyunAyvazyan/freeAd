@@ -1,15 +1,12 @@
 import "./style.css"
-import { FcRating } from "react-icons/fc";
-import { IoHeartCircle, IoStar } from "react-icons/io5";
+import { IoStar } from "react-icons/io5";
 import ModalWindowCall from "../../pages/singlePage/modalWindowCall";
 import ModalWindowMessage from "../../pages/singlePage/modalWindowMessage";
-import {  useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadFavoriteUserLengthFromLocalStorage } from "../../../store/featueres/favoriteState";
 import { Link } from "react-router-dom";
-import { toggleModalCall, toggleModalCallClose, toggleModalCallOpen, toggleModalMessage, toggleModalMessageOpen } from "../../../store/featueres/modalCallUser";
+import {  toggleModalCallOpen,  toggleModalMessageOpen } from "../../../store/featueres/modalCallUser";
 import FavoriteIcon from "../../favoriteIcon";
-import useClickOutside from "../../../hooks/useClickOutside";
 
 
 const CardUser = ({ user }) => {

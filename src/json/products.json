@@ -41,17 +41,17 @@
         "nkaragir":"Գտնվում է գերազանց վիճակում մանրամասների համար զանգահարեք նաև փոխանակում Տոյոտա կարոլայի կիա ֆորտեյի-ի հետ ձեր  Փոխանակում արաջարկեք",    
         "title": [
             "VAZ (Lada) 2107",
-           "3152 թ.",
-            "hfhg ksjd hdgfnhvnbvbvv fd dfd fd ",
-            "shgddhfgdhfgvvvvg"
+           "3152 թ."
+        
         ],
         "description": [
-            "100,000կմ",
-            "Բենզին"
+           "meqenan gtnvum e anteri vichakum,texadrvac e gaz,jdshfg dsfhg"
         ],
         "region": [
             "lori",
-            "vanadzor"
+            "vanadzor",
+            "kjadshgkjhdsjfh",
+            "dfdfdfvcbvcvcbv"
         ]
     },
     {
@@ -77,10 +77,10 @@
         "Ղեկ": "Ձախ",
         "Մաքսազերծված է": "Այո",
         "title": [
-            "VAZ (Lada)",
-            "2107",
-            "1.7 L",
-            "2010 թ."
+            "mersedes cls 180",
+            "100,000կմ",
+            "Բենզին",
+           "3152 թ."
         ],
         "description": [
             "arman@ gnac qayleu,heto na ekav u ners mtav,ba heto inch anenq i ban kanenq"
@@ -491,7 +491,13 @@
         "Վիճակ": "Չվթարված",
         "Գազի սարքավորումներ": "Տեղադրված",
         "Ղեկ": "Ձախ",
-        "Մաքսազերծված է": "Այո"
+        "Մաքսազերծված է": "Այո",
+        "title": [
+            "mersedes cls 180",
+            "100,000կմ",
+            "Բենզին",
+           "3152 թ."
+        ]
     }, {
         "id": 23,
         "categoryName": "ansharj guyq",

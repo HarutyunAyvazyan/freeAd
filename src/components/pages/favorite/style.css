@@ -47,8 +47,8 @@
     /* background-color: antiquewhite; */
     /* border-bottom:1px solid rgb(180, 116, 240); */
     padding: 5px 0;
-    margin:0 auto
-    /* position: relative; */
+    margin: 0 auto
+        /* position: relative; */
 }
 
 .basketChooseAll {
@@ -70,40 +70,148 @@
 .basketChoose {
     display: flex;
     flex-direction: row;
-    gap:0 10px;
+    gap: 0 10px;
     cursor: pointer;
 }
 
 .basketIcons {
-   display: flex;
-   flex-direction: row;
-   gap:0 40px
+    display: flex;
+    flex-direction: row;
+    gap: 0 40px
 }
 
 
-.favoriteMenu{
+.containerFvorite{
+    margin-top:100px;
+    margin-bottom: 10px;
+    padding-bottom:100px
+}
+
+.favoriteMenu {
     display: flex;
     flex-direction: row;
-    /* background-color: blue; */
-    width: 60%;
+    width: 30%;
     /* height: 200px; */
     border-radius: 20px;
     /* position: sticky; */
     top: 100px;
-    margin-bottom: 80px;
     /* z-index: 30; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:50px;
+    
 }
 
-.favoriteMenuItem{
+.favoriteMenuItem {
     width: 50%;
-    padding:10px;
-    border:1px solid grey
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+
 }
 
-.containerBasketChaeckbox{
-    width:90%
+.containerBasketChaeckbox {
+    width: 100%;
 }
-.containerFvorite{
-    background-color: white;
+
+.containerFvorite {
+    /* background-color: rgb(30, 12, 196); */
+    width: 100%;
+}
+
+.favoriteMenuItemActive {
+    width: 50%;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(67, 177, 250);
+    border-bottom:1px solid rgb(67, 177, 250);
+}
+
+.favoriteMenuUsers {
+    position: relative;
+}
+
+.favoriteMenuAd{
+    position: relative;
+}
+
+.favoriteMenuUsersCount {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(116, 117, 121);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    top: -10px;
+    right: -15px
+}
+
+.favoriteMenuUsersCountText {
+    color: white
+}
+
+.favoriteMenuAdCount {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(116, 117, 121);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    top: -10px;
+    right: -15px
+}
+
+.favoriteMenuAdCountText{
+    color:white
+}
+.favoriteTitle{
+    text-align: left;
+}
+.favoriteContent{
     width:100%;
+    /* background-color: red; */
+}
+@media(max-width:1024px){
+    .containerFvorite{
+        width:100%;
+        margin-top:70px;
+        margin-bottom: 10px;
+    }
+    .favoriteMenu{
+        width:40%
+    }
+}
+
+
+@media(max-width:768px){
+  
+    .favoriteMenu{
+        width:60%;
+        margin-top:80px
+    }
+    .favoriteTitle{
+        display:none
+    }
+}
+
+@media(max-width:520px){
+    .containerFvorite{
+        width:100%;
+        margin-top:70px;
+        margin-bottom: 10px;
+    }
+    .favoriteMenu{
+        width:80%;
+        margin-top:80px
+    }
+
 }

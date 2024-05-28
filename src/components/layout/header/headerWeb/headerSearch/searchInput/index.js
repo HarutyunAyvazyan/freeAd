@@ -5,9 +5,9 @@ import SearchBar from "./searchBar";
 import ModalWindowSearch from "./modalWindowSearch";
 import SearchResults from "./searchResults";
 
-import useClickOutside from "../../../../../../hooks/useClickOutside";
 
 import "./style.css";
+import useHandleClickOutside from "../../../../../../hooks/useHandleClickOutside";
 
 
 const SearchInput = () => {
@@ -17,7 +17,7 @@ const SearchInput = () => {
 
     const componentRef = useRef();
 
-    useClickOutside(componentRef, () => {
+    useHandleClickOutside(componentRef, () => {
         setOpenModal(false);
     });
 

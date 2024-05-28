@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteFavorite, onChange } from "../../../store/featueres/favoriteState";
 import { UniqueComponentId } from "primereact/utils";
 import pageName from "../../../constants/pageName";
-import { ImageBoxCards, ImageBoxCardsMobile } from "..";
+import ImageBoxCardsWeb from "../imageBoxCardsWeb";
 
 const CardBasket = ({ product, basketChekBoxChoose,handleDeleteItem,favorites,handleCheck }) => {
     // console.log(product,"sw")
@@ -36,7 +36,7 @@ const CardBasket = ({ product, basketChekBoxChoose,handleDeleteItem,favorites,ha
             <div className="cardBasketLink" >
 
                 <div className="cardBasketImageDiv" >
-                <ImageBoxCards images = {product.images}/>
+                <ImageBoxCardsWeb images = {product.images}/>
 
                     {/* <img src={product.images[0]} className="cardBasketImage" /> */}
                     <div className="cardBasketImageCheckBoxDiv" style={basketChekBoxChoose && favorites.length > 1 ? { display: "block" } : { display: "none" }} >

@@ -12,45 +12,29 @@ import { ImSearch } from "react-icons/im";
 
 import "./style.css"
 import ModalWindow from "../modalWindow";
+import useHandleClickOutside from "../../../../../../hooks/useHandleClickOutside";
 
 
 const AllCategoryButton = () => {
     const [overflowBody, setOverflowBody] = useState("auto")
-    const componentRef = useRef();
-
+    const modalRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const toggleModal = () => {
         setIsOpen(!isOpen);
         isOpen ? setOverflowBody("auto") : setOverflowBody("hidden")
     };
 
-
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (componentRef.current && !componentRef.current.contains(event.target)) {
-                setIsOpen(false);
-                setOverflowBody("auto")
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-
-        };
-    }, []);
-
-
-
+    useHandleClickOutside(modalRef, () => {
+    setIsOpen(false);
+    setOverflowBody("auto");
+    })
 
     useEffect(() => {
         document.body.style.overflow = overflowBody;
-        // console.log(document.body.root)
     }, [isOpen]);
 
     return (
-        <div className="categoryButtonDiv" ref={componentRef}>
+        <div className="categoryButtonDiv" ref={modalRef}>
             <button onClick={toggleModal} className="allCategoruButton">
                 <div>
                     <RiMenuFill style={{
@@ -62,8 +46,10 @@ const AllCategoryButton = () => {
                         color: "white"
                     }} />
                 </div>
+                <p className="allCategoruButtonText">
                 Bajinner
-
+                </p>
+               
             </button>
             <ModalWindow isOpen={isOpen} toggleModal={toggleModal} />
         </div>

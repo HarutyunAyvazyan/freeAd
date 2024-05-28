@@ -1,14 +1,14 @@
 .headerSearchMobile{
     display: flex; 
     flex-direction: row;
-    background-color: rgb(39, 39, 108);
+    background-color: rgb(67, 177, 250);
     justify-content: space-around;
     align-items: center;
-    padding:10px 5px;
+    padding:5px 5px;
     position: fixed;
     top:0;
-    z-index:2;
-    width:100%
+    z-index:4;
+    width:100%;
 }
 .headerSearchMobileButton{
     font-size: 12px;
@@ -20,13 +20,23 @@
     align-items: center;
     height:40px;
     /* background-color: white; */
-    border-radius: px;
+    /* border-radius: px; */
 }
 
 .headerSearchMobileInput{
-border-radius: 8px;
+border-radius: 3px;
 border:0;
-border:1px solid #BE29E7;
+/* border:1px solid #BE29E7; */
 width:70%;
 height:34px;
+}
+
+.headerSearchMobileContainer{
+    display:none
+}
+
+@media(max-width:1024px){
+    .headerSearchMobileContainer{
+        display: block;
+    }
 }

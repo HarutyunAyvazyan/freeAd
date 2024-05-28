@@ -1,15 +1,16 @@
 .signInDiv {
     margin: 0 auto;
-    padding-top: 100px;
+    padding: 100px 0;
 }
 
 .signinInputsDiv {
     width: 30%;
     background-color: rgb(253, 253, 254);
     margin: 0 auto;
-    border: 1px solid rgb(18, 131, 245);
+    /* border: 1px solid rgb(67, 177, 250); */
+    box-shadow: 0 0 10px 1px rgb(67, 177, 250,.4);
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 30px 0
 }
 
@@ -34,7 +35,7 @@
 
 .signInBtnDiv {
     width: 100%;
-    background-color: rgb(18, 131, 245);
+    background-color: rgb(67, 177, 250);
     margin: 30px 0;
     border-radius: 5px;
     height: 35px;
@@ -43,7 +44,8 @@
     align-items: center;
     text-decoration: none;
     color: white;
-    border: 1px solid rgb(6, 26, 45)
+    border:none
+    /* border: 1px solid rgb(6, 26, 45) */
 }
 
 .signInBtnDiv:hover {
@@ -74,14 +76,16 @@
     width: 30%;
     background-color: rgb(253, 253, 254);
     border-radius: 5px;
-    border: 1px solid rgb(18, 131, 245);
-    margin-top: 20px;
-    padding: 20px 0
+    /* border: 1px solid rgb(67, 177, 250); */
+    box-shadow: 0 0 10px 1px rgb(67, 177, 250,.4);
+
+    margin-top: 10px;
+    padding: 10px 0
 }
 
 
 .signInFooterLink {
-    color: rgb(18, 131, 245);
+    color: rgb(67, 177, 250);
     font-size: 12px;
     font-weight: 400;
     text-decoration: none;
@@ -98,14 +102,14 @@
     padding:0;
     text-align: right;
     font-size: 12px;
-    color: rgb(18, 131, 245)
+    color: rgb(67, 177, 250)
 }
 
 
 
-@media (max-width:1024px) {
+@media (max-width:1200px) {
     .signinInputsDiv{
-        width:70%;
+        width:40%;
         /* background-color:  #0B1023;
         margin: 0 auto;
         border:1px solid #3D4550;
@@ -115,9 +119,28 @@
         }
 
  .signInFooter{
-    width:70%;
+    width:40%;
 
  }
+ 
+    .password_link {
+        top: 110px
+    }
+}
+@media (max-width:1024px) {
+    .signinInputsDiv{
+        width:60%;
+        /* background-color:  #0B1023;
+        margin: 0 auto;
+        border:1px solid #3D4550;
+        border-radius:5px;
+        margin-bottom: 10px;
+        padding:30px 0 */
+        }
+        .signInFooter{
+            width:60%;
+        
+         }
  
     .password_link {
         top: 110px
@@ -130,10 +153,11 @@
  .signinInputsDiv{
     width:90%
  }
- .signInFooter{
-    width:90%
- }
 
+ .signInFooter{
+    width:90%;
+
+ }
     .password_link {
         text-align: center;
         position: absolute;

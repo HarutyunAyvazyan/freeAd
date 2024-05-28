@@ -8,6 +8,7 @@ import "./style.css"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ModalWindowMobile from "../modalWindowMobile";
+import SearchInput from "../../headerWeb/headerSearch/searchInput";
 // import ModalMenuMobile from "../modalMenuMobile";
 // import ModalWindow from "../modalWindow";
 
@@ -22,11 +23,12 @@ const HeaderSearchMobile = () => {
 
 
     return (
-        <div>
+        <div className="headerSearchMobileContainer">
   <div className="headerSearchMobile">
             <Link to="/"> <BiLogoShopify className="logoImage" /> </Link>
-            <input placeholder="sayti anun"
-                className="headerSearchMobileInput" />
+            <SearchInput/>
+            {/* <input placeholder="sayti anun"
+                className="headerSearchMobileInput" /> */}
             <Link to={"menuMobile"} >
                 <AiOutlineMenu
                     style={{

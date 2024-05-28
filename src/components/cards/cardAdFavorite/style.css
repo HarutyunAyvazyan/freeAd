@@ -1,0 +1,366 @@
+
+.cardAdFavorite {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(48, 47, 47, .1);
+    border-radius: 4px;
+    box-shadow: 0px 2px 0px 0px rgba(48, 47, 47, .1);
+    padding: 5px;
+    width: 700px;
+    height: auto;
+    background-color: rgb(252, 253, 255);
+    margin:2px 0;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.cardAdFavorite:hover{
+    box-shadow: 0px 0px 12px 3px  rgba(84, 85, 85, 0.2);
+    transition:box-shadow 0.6s
+}
+.cardAdFavoriteContainerInput {
+    display: block;
+    position: absolute;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    right:10px;
+    top:20px
+  }
+  
+  /* Hide the browser's default checkbox */
+
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    right:10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    background-color: white;
+      border:2px solid rgb(28, 168, 243) 
+  
+  }
+  
+  /* On mouse-over, add a grey background color */
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .cardAdFavoriteContainerInput input:checked ~ .checkmark {
+    background-color: #2196F3;
+    transition: linear 0.2s;
+    border:1px solid rgb(160, 217, 246)
+
+  }
+
+  .checkBoxLabel{
+    margin:0;
+    text-align: left;
+    color:rgb(62, 61, 61)
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .cardAdFavoriteContainerInput input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .cardAdFavoriteContainerInput .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+  .cardAdFavoriteCheckBox{
+    display:none
+  }
+
+
+.cardAdFavoriteImageDiv {
+    width: 40%;
+    height: 180px;
+    position: relative;
+
+}
+
+.cardAdFavoriteDescription {
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+.cardAdFavoriteImage {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid rgb(188, 204, 249); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardAdFavoriteImageCheckBoxDiv {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 248, 250, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cardAdFavoriteImageCheckBox {
+    font-size: 24px;
+    color: blueviolet;
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+.cardAdFavoriteDescription {
+    margin-left: 5px;
+    position: relative;
+}
+
+.cardAdFavoriteDescriptionCategoryName {
+    font-size: 12px;
+    padding: 4px;
+    border-bottom: 1px solid rgb(248, 238, 251);
+    height: 8%;
+    margin: 0;
+    overflow: hidden;
+    font-size: 12px;
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+}
+
+.cardAdFavoriteDescriptionDate {
+    /* margin-top:60px; */
+    width: 100%;
+    /* position: absolute; */
+    /* bottom:0; */
+    /* right:20px; */
+    /* left:10px; */
+    border-top: 1px solid rgb(248, 238, 251);
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 8%
+}
+
+.cardAdFavoriteDescriptionContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    margin:5px 0
+}
+
+.cardAdFavoriteDescriptionIcon {
+    display: none;
+}
+
+
+.cardAdFavoriteIconDeleteDiv{
+    width: 36px;
+    height: 24px;
+    background-color: rgb(67, 177, 250);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+.cardAdFavoriteIconDelete{
+    color:white
+}
+
+.cardAdFavoriteIconShare{
+    color:white;
+}
+
+.cardAdFavoriteIconShareDiv {
+    width: 36px;
+    height: 24px;
+    background-color: rgb(67, 177, 250);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardAdFavoriteIconDeleteDiv:hover .cardAdFavoriteIconDelete{
+    
+    /* font-size: 24px; */
+    color: red;
+    transition: linear 0.2s;
+}
+
+.cardAdFavoriteIconShareDiv:hover .cardAdFavoriteIconShare{
+    transition: linear 0.2s;
+    color: black;
+}
+
+.cardAdFavoriteDescriptionContentMain {
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.cardAdFavoriteLink {
+    text-decoration: none;
+    /* width: 100%; */
+}
+
+.cardAdFavorite:hover .cardAdFavoriteDescriptionIcon {
+    width:50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+.cardAdFavoriteIconDisplay{
+    display: none;
+    
+}
+.cardAdFavoritePrice{
+/* margin: 10px 0; */
+padding: 4px 0;
+text-decoration: none;
+font-size: 20px;
+color: black;
+font-weight: 700;
+line-height: 1.2;
+font-family: 'Jaldi', sans-serif;
+}
+
+.cardAdFavoriteTitle{
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    color: #000;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 400;
+    font-family: 'Jaldi', sans-serif;
+    line-height: 1.1;
+
+}
+
+.cardAdFavoriteRegion{
+    align-items: center;
+    text-align: left;
+    gap: 0 2px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    font-size: 12px;
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+    margin-top:10px
+}
+
+.cardAdFavoriteDescriptionItems{
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
+    padding: 4px 0;
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.cardAdFavoriteDescriptionItem{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin: 0;
+    text-decoration: none;
+    color: rgb(110, 110, 110);
+    font-size: 12px;
+}
+
+@media(max-width:1024px){
+    .cardAdFavorite{
+        width:600px;
+        /* margin:0 auto; */
+        height: auto;
+        gap:3%
+
+    }
+}
+@media(max-width:768px){
+    .cardAdFavorite{
+        width:94%;
+        margin:0 auto;
+        height: auto;
+        gap:3%
+
+    }
+    .cardAdFavoriteImageDiv{
+        width:40%;
+        height: 160px;
+        /* border:1px solid grey */
+    }
+    .cardAdFavoritePrice{
+margin:0;
+padding:0
+    }
+    .cardAdFavoriteDescription{
+        width:50%;
+        margin:0;
+        padding:0
+    }
+
+    .cardAdFavoriteTitle{
+        margin:0;
+        padding:0
+    }
+    .cardAdFavoriteRegion{
+        margin-top:5px;
+        padding:0
+    }
+    .cardAdFavoriteDescriptionItems{
+        margin:0;
+        padding:0
+    }
+
+}

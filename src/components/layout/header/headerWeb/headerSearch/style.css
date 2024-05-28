@@ -29,6 +29,47 @@ position: relative;
     font-size:14px
 }
 
+.favoriteIconDiv{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(217, 234, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.favoriteIcon{
+    font-size: 28px;
+    color:rgb(138, 138, 241)
+}
+.favoriteIconActive{
+    color:red;
+    font-size: 28px;
+}
+
+.favoriteCountDiv{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(131, 132, 133);
+    position: absolute;
+    left:-8px;
+    top: 0;
+    /* right: 0; */
+ 
+
+}
+.favoriteCountText{
+    color:white;
+    font-size:14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 @media(max-width:1024px){
     .headerSearchContainer{
 width:100%

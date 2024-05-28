@@ -10,8 +10,9 @@ const Header = ({countBasket}) => {
             {/* {window.innerWidth>=800 ?  <HeaderBar countBasket={countBasket}/>:<HeaderBarMobile innerWidth = {window.innerWidth}/> */}
  {/* } */}
 
- {window.innerWidth<=800 ? <HeaderBarMobile innerWidth = {window.innerWidth}/> :  <HeaderBar countBasket={countBasket}/>
-}
+<HeaderBarMobile /> 
+ <HeaderBar />
+
         </div>
     )
 }
