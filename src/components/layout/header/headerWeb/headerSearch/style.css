@@ -10,7 +10,7 @@
 .headerSearch{
     height: 60px;
     position: relative;
-    /* background-color:aliceblue; */
+    background-color:rgb(225, 241, 252);
     display: flex;
     align-items: center;
 

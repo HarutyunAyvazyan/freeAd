@@ -1,0 +1,43 @@
+
+.cardAdFavoriteIconDeleteDiv {
+    width: 36px;
+    height: 24px;
+    background-color: rgb(67, 177, 250);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.cardAdFavoriteIconDelete {
+    color: white
+}
+
+.cardAdFavoriteIconShare {
+    color: white;
+}
+
+.cardAdFavoriteIconShareDiv {
+    width: 36px;
+    height: 24px;
+    background-color: rgb(67, 177, 250);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardAdFavoriteIconDeleteDiv:hover .cardAdFavoriteIconDelete {
+
+    /* font-size: 24px; */
+    color: red;
+    transition: linear 0.2s;
+}
+
+.cardAdFavoriteIconShareDiv:hover .cardAdFavoriteIconShare {
+    transition: linear 0.2s;
+    color: black;
+}
+

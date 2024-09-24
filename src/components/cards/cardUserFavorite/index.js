@@ -6,70 +6,81 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaUser } from "react-icons/fa6";
 import { SlUser } from "react-icons/sl";
 import { PiUserFill } from "react-icons/pi";
+import "./style.css"
+import CheckBoxFavorite from "../../../ui/CkeckBoxFavorite";
+import FavoriteIcons from "../../favoriteIcons";
+import Rating from "../../rating";
+import CardMenuMobile from "../../cardMenuMobile";
+
+const CardUserFavorite = ({
+    user,
+    basketChekBoxChoose,
+    handleDeleteItem,
+    handleClickShare,
+    handleClickCopy,
+    favorites,
+    handleCheck
+}) => {
+    const [isChecked, setIsChecked] = useState(false)
 
 
-const CardUserFavorite = ({ user,basketChekBoxChoose,handleDeleteItem,favorites,handleCheck}) => {
-    const [isChecked,setIsChecked] = useState(false)
-    // const favorite = useSelector(state => state.favorite)
-// console.log(favorites,"favorites")
-  
     const handleCheckedProduct = () => {
         setIsChecked(!isChecked)
-        // dispatch(onChange(product.id))
+        // handleCheck(user.id)
     }
     return (
-        <label>
-        <div className="cardBasket" onClick={handleCheckedProduct}>
-                   <div className="cardBasketLink" >
-       
-                       <div className="cardBasketImageDiv" >
-                           <PiUserFill className="cardBasketImage" style={{color:"blue",backgroundColor:"yellow"}} />
-                           <div className="cardBasketImageCheckBoxDiv" style={basketChekBoxChoose && favorites.length > 1 ? { display: "block" } : { display: "none" }} >
-                               <input
-                                   className="cardBasketImageCheckBox"
-                                   type="checkbox"
-                                   checked={user.isChecked || false}
-                                   onChange={() =>handleCheck(user.id)}
-                               />
-                           </div>
-                       </div>
-                   </div>
-                   <div className="cardBasketDescription">
-                       <div className={basketChekBoxChoose ? "cardBasketIconDisplay" : "cardBasketDescriptionIcon"} >
-                           <BsShare className="cardBasketIconShare" />
-                           <BsTrash3 className="cardBasketIconDelete" onClick={() => handleDeleteItem(user.id)} />
-                       </div>
-                       <div className="cardBasketDescriptionCategoryName">
-                           GLXAVOR
-                           TRANSPORT
-                           AVTOMEQENANER
-                           AVTOMEQENANER
-                       </div>
-                       <div className="cardBasketDescriptionContent">
-                           <Link to={basketChekBoxChoose && favorites.length > 1 ? null : `/${pageName.user}/${user.id}`} className="cardBasketDescriptionContentMain" >
-                               <h1 style={{ fontWeight: "400", margin: "0" }}>{user.firstName}</h1>
-                               {/* <h3
-                                   className="cardBasketDescriptionTitle"
-                                   style={{ fontWeight: "500" }}
-                               >
-                                   {product.Մակնիշ}
-                                   {product.Մոդել},
-                                   {product[" Շարժիչի ծավալը"]},
-                                   {product.Տարի}
-       
-                               </h3> */}
-                               <p>{user.email}</p>
-                           </Link>
-                       </div>
-                       <div className="cardBasketDescriptionDate" >
-                           <span >Добавлено в 08.03.2024</span>
-                           <span> Обновлено в: 08.03.2024</span>
-       
-                       </div>
-       
-                   </div>
-               </div>
-               </label>
+        <div className="cardUserFavorite" onClick={handleCheckedProduct}>
+            <div className="cardUserFavoriteImageDiv" >
+                <div className="cardUserFavoriteImageContentDiv">
+                    {user.image ?
+                        <img
+                            src={user.image}
+                            alt={user.firstName}
+                            className="cardUserFavoriteImage"
+                        />
+                        :
+                        <div className="cardUserFavoriteIconDiv">
+                            {user.firstName.slice(0, 1).toUpperCase()}
+                        </div>
+                    }
+                </div>
+                {
+                    basketChekBoxChoose && favorites.length > 1 &&
+                    <div className="cardAdFavoriteImageCheckBoxDiv"  >
+                        <CheckBoxFavorite
+                            checked={user.isChecked || false}
+                            onChange={() => handleCheck(user.id)}
+                        />
+                    </div>
+                }
+            </div>
+            <div className="cardUserFavoriteDescription">
+                <div className={basketChekBoxChoose ? "carUserdFavoriteIconDisplay" : "cardUserFavoriteDescriptionIcon"} >
+                    <FavoriteIcons
+                        // onClickShare={}
+                        onClickDelete={() => handleDeleteItem(user.id)}
+                    />
+                </div>
+                <div className="cardUserFavoritetDescriptionContent">
+                    <Link
+                        to={basketChekBoxChoose && favorites.length > 1 ? null : `/${pageName.user}/${user.id}`}
+                        className="cardUserFavoriteDescriptionContentMain"
+                    >
+                        <h1 className="cardUserfavoriteUserName"> {user.firstName} </h1>
+                        <h2 className="cardUserFavoriteCountAd">Haytararutyunneri qanak {user.products.length}</h2>
+                        <Rating />
+                    </Link>
+                </div>
+                <div className="cardUserFavoriteDescriptionDate" >
+                    <span >Grancman amsativ@ в 08.03.2024</span>
+                </div>
+            </div>
+            <CardMenuMobile
+                onClickDelete={() => handleDeleteItem(user.id)}
+                onClickShare={handleClickShare}
+                onClickCopy={handleClickCopy}
+            />
+        </div>
     )
 }
 export default CardUserFavorite

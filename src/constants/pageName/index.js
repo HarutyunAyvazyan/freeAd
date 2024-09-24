@@ -18,6 +18,7 @@ const pageName = {
     favorite:"/favorite",
     favoriteUsers:"us",
     favoriteAnnouncement:"an",
+    // menuIpad:
     menuCategoriesMobile:"menuMobile",
     menuSubCategoriesMobile:"menuCategoriesMobile/:menuCategoryName",
     categoryPage:"Categories/:categoryName",

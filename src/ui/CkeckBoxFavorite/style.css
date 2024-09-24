@@ -1,0 +1,71 @@
+.cardAdFavoriteContainerInput {
+    display: block;
+    position: absolute;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    right: 10px;
+    top: 20px
+}
+
+/* Hide the browser's default checkbox */
+
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid rgb(28, 168, 243)
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.cardAdFavoriteContainerInput input:checked~.checkmark {
+    background-color: #2196F3;
+    transition: linear 0.2s;
+    border: 1px solid rgb(160, 217, 246)
+}
+
+.checkBoxLabel {
+    margin: 0;
+    text-align: left;
+    color: rgb(62, 61, 61)
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.cardAdFavoriteContainerInput input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.cardAdFavoriteContainerInput .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.cardAdFavoriteCheckBox {
+    display: none
+}

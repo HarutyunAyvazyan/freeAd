@@ -1,0 +1,22 @@
+.rat{
+    font-size: 20px;
+    color:rgb(205, 205, 27)
+}
+
+.userRating{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    margin:15px 0
+}
+@media(max-width:626px){
+    .userRating{
+        display: flex;
+    flex-direction: row;
+    gap:0px;
+    margin:10px 0
+    }
+    .rat{
+        font-size:15px
+    }
+    }

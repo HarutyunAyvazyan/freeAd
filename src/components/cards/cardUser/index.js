@@ -7,6 +7,7 @@ import { loadFavoriteUserLengthFromLocalStorage } from "../../../store/featueres
 import { Link } from "react-router-dom";
 import {  toggleModalCallOpen,  toggleModalMessageOpen } from "../../../store/featueres/modalCallUser";
 import FavoriteIcon from "../../favoriteIcon";
+import Rating from "../../rating";
 
 
 const CardUser = ({ user }) => {
@@ -29,9 +30,9 @@ const CardUser = ({ user }) => {
                     item={user}
                     storageName='favUs'
                     dispatchFunc={loadFavoriteUserLengthFromLocalStorage()}
-                    classNameDiv="cardUserFavoriteIconDiv"
-                    classNameIcon="cardUserFavoriteIcon"
-                    classNameIconActive="cardUserFavoriteIconActive" />
+                    classNameDiv="cardUserIconDiv"
+                    classNameIcon="cardUserIcon"
+                    classNameIconActive="cardUserIconActive" />
 
             </div>
             <div className="cardUserDescription">
@@ -49,13 +50,14 @@ const CardUser = ({ user }) => {
                 <Link to={`/user/${user.id}`} style={{ textDecoration: "none" }}>
                     <h1 className="cardUserName">{user.firstName} {user.lastName}</h1>
                 </Link>
-                <div className="userRating">
+                <Rating/>
+                {/* <div className="userRating">
                     <IoStar className="rat" />
                     <IoStar className="rat" />
                     <IoStar className="rat" />
                     <IoStar className="rat" />
                     <IoStar className="rat" />
-                </div>
+                </div> */}
                 <div className="userButtons">
                     <button className="userButtonCall" onClick={handleToggleModalCall}>
                         Call

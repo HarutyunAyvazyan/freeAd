@@ -3,7 +3,7 @@ import HeaderBarMobile from "./headerMobile/headreBarMobile"
 
 
 
-const Header = ({countBasket}) => {
+const Header = () => {
     // console.log(window.innerWidth,"px")
     return (
         <div>
