@@ -6,6 +6,7 @@ import { RiCheckboxMultipleFill } from "react-icons/ri";
 
 import { RiCheckboxMultipleLine } from "react-icons/ri"
 import "./style.css"
+import { useSelector } from "react-redux";
 
 const FavoriteMark = ({
     favoriteCheckBoxChoose,
@@ -14,13 +15,15 @@ const FavoriteMark = ({
     itemIsChecked,
     handleCheckAll,
     handleDeleteAll,
-    favoriteMarkText
+    favoriteMarkText,
+    favoriteMarkLength
 }) => {
+
     return (
         <div className="containerFavoriteChaeckbox">
             <div className="favoriteMarkDiv">
                 <div className="FavoriteMarkConuntProductCheckbox" >
-                    <p className="FavoriteMarkConuntProductCheckboxText">{favoriteCheckBoxChoose ? `@ntrvacner:${arrayWithChecked?.filter((item) => item.isChecked).length}` : arrayWithChecked.length > 1 ? <div>{favoriteMarkText} : {arrayWithChecked.length}</div> : <div>{favoriteMarkText}</div>}</p>
+                    <p className="FavoriteMarkConuntProductCheckboxText">{favoriteCheckBoxChoose ? `@ntrvacner:${arrayWithChecked?.filter((item) => item.isChecked).length}` : arrayWithChecked.length > 1 ? <div>{favoriteMarkText} : {favoriteMarkLength}</div> : <div>{favoriteMarkText}</div>}</p>
                     {/* <span className="favoriteMarkCountProduct">qanak {arrayWithChecked.length}</span> */}
                     {
                         arrayWithChecked.length > 1 ?

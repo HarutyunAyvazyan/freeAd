@@ -4,6 +4,7 @@ import {  NavLink, Outlet } from "react-router-dom";
 import {  useSelector } from "react-redux";
 
 import "./style.css"
+import HeaderSearchMobile from "../../layout/header/headerMobile/headerSaerchMobile";
 
 
 const Favorite = () => {
@@ -14,6 +15,7 @@ const Favorite = () => {
         return isActive ? "favoriteMenuItemActive" : "favoriteMenuItem"
     }
     return (
+        <>
         <div className="container">
             <div className="containerFvorite">
                 <h1 className="favoriteTitle">Favoritner</h1>
@@ -42,6 +44,8 @@ const Favorite = () => {
                 </div>
             </div>
          </div>
+        </>
+      
     )
 }
 

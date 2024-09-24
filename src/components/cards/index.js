@@ -41,6 +41,16 @@ const Card = ({ product }) => {
   const cloneProductTitle = product.title && product.title.join(", ")
 
   const cloneProductRegion = product.region && product.region.join(", ")
+
+  const formatPrice = (price) => {
+    // Преобразуем число в строку и удаляем все пробелы
+    const cleanedValue = price.toString().replace(/\s+/g, '');
+    // Если больше трех цифр, добавляем пробелы между тысячами
+    if (cleanedValue.length > 3) {
+      return cleanedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+    return cleanedValue;
+  };
   return (
     <div className="card" >
       <Link to={`${pageName.product}/${product.id}`} className="cardLink" onClick={(e) => handleClick(e)}>
@@ -68,7 +78,7 @@ const Card = ({ product }) => {
               {cloneProductTitle}
             </strong>
             <div className="cardPriceDiv">
-              <h1 className="cardPrice">$ {product.price}</h1>
+              <h1 className="cardPrice">{formatPrice(product.price)} $</h1>
             </div>
             <div className="cardDescriptionItems">
               {product.description?.map((descriptionItem =>

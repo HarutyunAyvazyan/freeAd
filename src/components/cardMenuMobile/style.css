@@ -1,0 +1,57 @@
+
+.cardFavoriteMenuMobile {
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.cardFavoriteMenuMobileIcon {
+    font-size: 22px;
+    color: rgb(167, 165, 165)
+}
+
+.cardFavoriteMenuMobileModal {
+    width: 200px;
+    height: 140px;
+    box-shadow: 0px 0px 10px 1px rgb(209, 208, 208);
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1000;
+    right: 10px;
+    top: 46px;
+    background-color: white;
+}
+
+.cardFavoriteMenuMobileModalDelete {
+    color: red;
+    cursor: pointer;
+}
+
+.cardFavoriteMenuMobileModalCopy {
+    cursor: pointer
+}
+
+.cardFavoriteMenuMobileModalShare {
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .cardFavoriteMenuMobile {
+        display: block;
+    }
+}
+@media(max-width:626px){
+    .cardFavoriteMenuMobileModal {
+        width: 200px;
+        height: 130px;
+        box-shadow: 0px 0px 10px 1px rgb(209, 208, 208);
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        top: 46px;
+        background-color: white;
+    }
+}

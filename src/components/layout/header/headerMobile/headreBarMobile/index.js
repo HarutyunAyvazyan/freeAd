@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { loadFavoriteAdLengthFromLocalStorage, loadFavoriteUserLengthFromLocalStorage } from "../../../../../store/featueres/favoriteState";
 import FavoriteIconNavBar from "../../../../favoriteIconNavBar";
+import pageName from "../../../../../constants/pageName";
 
 
 
@@ -57,7 +58,7 @@ const HeaderBarMobile = () => {
                         {/* <span >Home</span> */}
                     {/* </div> */}
                 </NavLink>
-                <NavLink className={isActiveLinkMobile} to="3">
+                <NavLink className={isActiveLinkMobile} to={pageName.menuCategoriesMobile}>
                         {/* <div className="headerBarMobileItemIconDiv"> */}
                         <RiMenuSearchLine className="headerBarMobileIcon"/>
                         {/* </div> */}
@@ -93,7 +94,7 @@ const HeaderBarMobile = () => {
                     {/* </div> */}
                 </NavLink>
             </div>
-            <HeaderSearchMobile />
+            {/* <HeaderSearchMobile /> */}
         </div>
 
     )

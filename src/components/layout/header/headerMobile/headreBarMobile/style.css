@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
-    padding: 6px 0;
+    padding: 11px 0;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     z-index: 5;
@@ -67,6 +67,10 @@ span {
 
 .headerBarMobileIcon{
     font-size: 22px;
+    color:rgb(200,200,209);
+}
+.headerBarMobileIconActive{
+    font-size: 22px;
     color:rgb(67, 177, 250);
 }
 
@@ -80,7 +84,7 @@ span {
 
 .favoriteNavBarIconActiveMobile{
     font-size: 24px;
-    color:rgb(67, 177, 250);
+    color:rgb(200,200,209);
     display: flex;
     justify-content: center;
     align-items: center;

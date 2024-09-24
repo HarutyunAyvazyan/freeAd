@@ -1,6 +1,6 @@
 
 import { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { getProducts } from "../../../../utils"
 import { loadFavoriteAdLengthFromLocalStorage } from "../../../../store/featueres/favoriteState"
 import { RiCheckboxMultipleLine } from "react-icons/ri"
@@ -23,17 +23,20 @@ const FavoriteAnnouncement = () => {
     const favoriteProducts = getProducts().filter(product => favorites.includes(product.id));
 
     const [productsWithChecked, setProductsWithChecked] = useState(favoriteProducts.map(product => ({ ...product, isChecked: false })));
+    const favoriteAdLenght = useSelector(state => state.favorite.favoriteAdLength)
 
     const handleDeleteItem = (id) => {
         const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
         const updatedFavorites = storedFavorites.filter(favId => favId !== id);
         setFavorites(updatedFavorites);
-        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
         const updatedProductsWithChecked = productsWithChecked.filter(product => product.id !== id);
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
         setProductsWithChecked(updatedProductsWithChecked);
         dispatch(loadFavoriteAdLengthFromLocalStorage());
-
+        console.log(updatedProductsWithChecked,"new")
+        console.log(productsWithChecked,"hin")
     };
+
 
     const productsIsChecked = productsWithChecked.every(item => item.isChecked === true);
 
@@ -70,25 +73,33 @@ const FavoriteAnnouncement = () => {
         setBasketChekBoxChoose(!basketChekBoxChoose)
     }
 
+const handleClickCopy = () => {
 
+}
+
+const handleClickShare = () => {
+
+}
 
     return (
+        // <div className="container">
         <div className="favoriteAd" >
-            <div className="favoriteAdContent">
+            <div className="favoriteAdContentContent">
                 {!productsWithChecked.length ?
                     <h3 >duq chuneq naxntrac haytararutyunner</h3> :
                     <div className="containerBasketChaeckbox">
-                        <FavoriteMark 
-                          favoriteCheckBoxChoose={basketChekBoxChoose}
-                          arrayWithChecked={productsWithChecked}
-                          handleClickFavoriteCheckBoxChoose={handleBasketChekBoxChoose}
-                          itemIsChecked={productsIsChecked}
-                          handleCheckAll={handleCheckAll}
-                          handleDeleteAll={handleDeleteAll}
-                          favoriteMarkText={productsWithChecked.length >1 ? "Haytararutyunneri qanak" : "Haytararutyunner"}
+                        <FavoriteMark
+                            favoriteCheckBoxChoose={basketChekBoxChoose}
+                            arrayWithChecked={productsWithChecked}
+                            handleClickFavoriteCheckBoxChoose={handleBasketChekBoxChoose}
+                            itemIsChecked={productsIsChecked}
+                            handleCheckAll={handleCheckAll}
+                            handleDeleteAll={handleDeleteAll}
+                            favoriteMarkText={productsWithChecked.length > 1 ? "Haytararutyunneri qanak" : "Haytararutyunner"}
+                            favoriteMarkLength={favoriteAdLenght}
                         />
                         {
-                            productsWithChecked.map((product) =>
+                            productsWithChecked?.map((product) =>
                                 <CardAdFavorite
                                     product={product}
                                     basketChekBoxChoose={basketChekBoxChoose}
@@ -96,6 +107,9 @@ const FavoriteAnnouncement = () => {
                                     handleDeleteItem={handleDeleteItem}
                                     favorites={favorites}
                                     handleCheck={handleCheck}
+                                    productsWithChecked={productsWithChecked}
+                                    handleClickCopy={handleClickCopy}
+                                    handleClickShare={handleClickShare}
                                 />
                             )
                         }
@@ -103,6 +117,8 @@ const FavoriteAnnouncement = () => {
                 }
             </div>
         </div>
+        // </div >
+
     )
 }
 

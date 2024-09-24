@@ -3,6 +3,8 @@ import Categories from "../../../../../constants/stateCategories";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import "./style.css"
+import HeaderBarMobile from "../headreBarMobile";
+import HeaderSearchMobile from "../headerSaerchMobile";
 
 
 
@@ -24,37 +26,27 @@ const MenuCategoryMobile = ({ toogleModalMobile }) => {
     }, [currentTab]);
 
     return (
-        <div className="menuMobile" >
-            <div className="menuMobileContent">
-                {categories.map((category, index) => (
-                    
-                    <Link to={`/menuCategoriesMobile/${category.name}`}
-                     style={{
-                        backgroundImage: `url(${category.pathImg})`,
-                        // overflow: "hidden",
-                        // backgroundBlendMode:"#480D59"
-                    }}
-                        key={index}
-                        className="modalMenuMobileContentItem"
-                        id={category.id}
-                        onClick={(e) => handleClick(e, category.id)}
-                    > 
+        <>
+            <HeaderSearchMobile />
+            <div className="menuMobile" >
+                <div className="menuMobileContent">
+                    {categories.map((category, index) => (
 
-                        <div style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            // backgroundColor: "#480D59",
-                            // opacity: "0.3"
+                        <Link to={`/menuCategoriesMobile/${category.name}`}
+                            key={index}
+                            className="modalMenuMobileContentItem"
+                            id={category.id}
+                            onClick={(e) => handleClick(e, category.id)}
+                        >
 
-                        }}>
-                                        <span className="categoryButtonTextMobile" style={{color:"white"}}>{category.name}</span>
+                            <div className="menuMobileImageDiv">
+                                <img src={category.pathImg} className="menuMobileImage" />
 
-                        </div>
+                                <span className="categoryButtonTextMobile" style={{ color: "white" }}>{category.name}</span>
 
-                        {/* {currentTab === category.id &&
+                            </div>
+
+                            {/* {currentTab === category.id &&
                             <div className="subCategoryItems" style={currentTab === category.id ? { display: "flex" } : { display: "none" }}>
                                 {
                                     category.subCategories.map((subCategory) => (
@@ -77,15 +69,15 @@ const MenuCategoryMobile = ({ toogleModalMobile }) => {
                                     )}
                             </div>
                         } */}
-                    </Link>
+                        </Link>
 
 
-                ))}
-            </div>
-            {/* <div className="aaaa">
+                    ))}
+                </div>
+                {/* <div className="aaaa">
                 {categories && categories.map((category) => (
                     <div> */}
-            {/* {currentTab === category.id &&
+                {/* {currentTab === category.id &&
                             <div>
                                 {
                                     category.subCategories.map((subCategory) => (
@@ -101,11 +93,14 @@ const MenuCategoryMobile = ({ toogleModalMobile }) => {
                                     )}
                             </div>
                         } */}
-            {/* </div>
+                {/* </div>
 
                 ))}
             </div> */}
-        </div>
+            </div>
+
+        </>
+
     )
 
 }

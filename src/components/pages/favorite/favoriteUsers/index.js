@@ -3,7 +3,7 @@ import { getUsers } from "../../../../utils"
 import { BsShare, BsTrash3 } from "react-icons/bs"
 import { RiCheckboxMultipleLine } from "react-icons/ri"
 import { loadFavoriteUserLengthFromLocalStorage } from "../../../../store/featueres/favoriteState"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import CardUserFavorite from "../../../cards/cardUserFavorite"
 import FavoriteMark from "../../../favoriteMark"
 
@@ -18,13 +18,14 @@ const FavoriteUsers = () => {
     const favoriteProducts = getUsers().filter(user => favorites.includes(user.id));
 
     const [productsWithChecked, setProductsWithChecked] = useState(favoriteProducts.map(product => ({ ...product, isChecked: false })));
+    const favoriteUserLength = useSelector(state => state.favorite.favoriteUserLength)
 
     const handleDeleteItem = (id) => {
         const storedFavorites = JSON.parse(localStorage.getItem("favUs")) || [];
         const updatedFavorites = storedFavorites.filter(favId => favId !== id);
         setFavorites(updatedFavorites);
         localStorage.setItem("favUs", JSON.stringify(updatedFavorites));
-        const updatedProductsWithChecked = productsWithChecked.filter(product => product.id !== id);
+        const updatedProductsWithChecked = productsWithChecked.filter(user => user.id !== id);
         setProductsWithChecked(updatedProductsWithChecked);
         dispatch(loadFavoriteUserLengthFromLocalStorage());
 
@@ -65,39 +66,41 @@ const FavoriteUsers = () => {
         setBasketChekBoxChoose(!basketChekBoxChoose)
     }
 
-    console.log(productsWithChecked)
 
     return (
-            <div className="favoriteUsers" >
-                <div className="favoriteUsersContent">
-                    {!productsWithChecked.length ?
-                        <h3 >duq chuneq naxntrac haytararutyunner</h3> :
-                        <div className="containerBasketChaeckbox">
-                            <FavoriteMark
-                                favoriteCheckBoxChoose={basketChekBoxChoose}
-                                arrayWithChecked={productsWithChecked}
-                                handleClickFavoriteCheckBoxChoose={handleBasketChekBoxChoose}
-                                itemIsChecked={productsIsChecked}
-                                handleCheckAll={handleCheckAll}
-                                handleDeleteAll={handleDeleteAll}
-                                favoriteMarkText="ogtaterer"
-                            />
-                            {
-                                productsWithChecked.map((user) =>
-                                    <CardUserFavorite
-                                        user={user}
-                                        basketChekBoxChoose={basketChekBoxChoose}
-                                        key={user.id}
-                                        handleDeleteItem={handleDeleteItem}
-                                        favorites={favorites}
-                                        handleCheck={handleCheck}
-                                    />
-                                )
-                            }
-                        </div>
-                    }
-                </div>
+        <div className="favoriteUsers" >
+            <div className="favoriteUsersContent">
+                {!productsWithChecked.length ?
+                    <h3 >duq chuneq naxntrac haytararutyunner</h3> :
+                    <div className="containerBasketChaeckbox">
+                        <FavoriteMark
+                            favoriteCheckBoxChoose={basketChekBoxChoose}
+                            arrayWithChecked={productsWithChecked}
+                            handleClickFavoriteCheckBoxChoose={handleBasketChekBoxChoose}
+                            itemIsChecked={productsIsChecked}
+                            handleCheckAll={handleCheckAll}
+                            handleDeleteAll={handleDeleteAll}
+                            favoriteMarkText="ogtaterer"
+                            favoriteMarkLength ={favoriteUserLength}
+                        />
+                        {
+                            productsWithChecked.map((user) =>
+                                <CardUserFavorite
+                                    productsWithChecked={productsWithChecked}
+                                    user={user}
+                                    basketChekBoxChoose={basketChekBoxChoose}
+                                    key={user.id}
+                                    handleDeleteItem={handleDeleteItem}
+                                    favorites={favorites}
+                                    handleCheck={handleCheck}
+                                />
+
+                            )
+                        }
+                    </div>
+                }
             </div>
+        </div>
     )
 }
 
